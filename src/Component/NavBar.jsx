@@ -14,20 +14,21 @@ import {
     useDisclosure
   } from '@chakra-ui/react'
 import { useRef} from 'react'
+import logo from './sumat-low-resolution-logo-color-on-transparent-background.png'
 
 
   
   export const NavBar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = useRef()
-
+   
 
    return (<Box>
-        <Box  bg='#65CCB7' h='70px' top='0px' position='fixed' w='100%'  display={{base:'none',sm:'none',md:'none',lg:'inline-block'}}>
+        <Box  bg='#65CCB7' pt='5px' pb='15px' top='0px' position='fixed' w='100%'  display={{base:'none',sm:'none',md:'none',lg:'inline-block'}}>
         <Flex w='92%' m='auto' textAlign='center' justify='space-between' align='center' mt='10px'>
           <Box >
-            <Box>
-            <Text  fontSize='3xl'>Sumat</Text>
+            <Box w='25%' >
+            <img width='80%' src={logo} />
              </Box>
           </Box>
           <Flex   w='55%' justify='space-between' letterSpacing='1px' >
@@ -54,12 +55,12 @@ import { useRef} from 'react'
           </Flex>
         </Flex>
         </Box>
-        <Box bg='#65CCB7' h='70px' top='0px' position='fixed' w='100%'  display={{base:'block',sm:'block',md:'block',lg:'none'}}>
+        <Box bg='#65CCB7' pt='5px' pb='15px' top='0px' position='fixed' w='100%'  display={{base:'block',sm:'block',md:'block',lg:'none'}}>
           <Flex  w='92%' m='auto' textAlign='center' justify='space-between' align='center' mt='10px'>
              {/* for icon  */}
-          <Box >
-          <Text>Sumat</Text>
-          </Box>
+             <Box w='25%' >
+            <img width='50%' src={logo} />
+             </Box>
     {/* for slider hamburger menu*/}
           <Box w='5%' ref={btnRef} onClick={onOpen}>
             <img  src="https://cdn-icons-png.flaticon.com/512/2613/2613045.png"/>
