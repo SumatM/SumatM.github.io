@@ -1,20 +1,17 @@
 import {
     Box,
-    Button,
     Flex,
     Text,
     Drawer,
     DrawerOverlay,
     DrawerContent,
-    DrawerCloseButton,
     DrawerBody,
-    DrawerHeader,
-    Input,
-    DrawerFooter,
     useDisclosure
   } from '@chakra-ui/react'
 import { useRef} from 'react'
 import logo from './sumat-low-resolution-logo-color-on-transparent-background.png'
+import { HamburgerIcon } from '@chakra-ui/icons'
+import resume from './../Banner/Sumat-Mallick-Resume.pdf'
 
 
   
@@ -23,8 +20,8 @@ import logo from './sumat-low-resolution-logo-color-on-transparent-background.pn
     const btnRef = useRef()
    
 
-   return (<Box>
-        <Box  bg='#65CCB7' pt='5px' pb='15px' top='0px' position='fixed' w='100%'  display={{base:'none',sm:'none',md:'none',lg:'inline-block'}}>
+   return (<Box id="nav-menu">
+        <Box  backdropFilter='auto' backdropBlur='10px' pt='5px' pb='15px' top='0px' position='fixed' w='100%'  display={{base:'none',sm:'none',md:'none',lg:'inline-block'}} zIndex='99'>
         <Flex w='92%' m='auto' textAlign='center' justify='space-between' align='center' mt='10px'>
           <Box >
             <Box w='25%' >
@@ -33,62 +30,62 @@ import logo from './sumat-low-resolution-logo-color-on-transparent-background.pn
           </Box>
           <Flex   w='55%' justify='space-between' letterSpacing='1px' >
 
-          <Box p='5px 15px' _hover={{background:"#57BB99",color:'#004D40'}} fontWeight='bolder' color='white'>
-            <Text>HOME</Text>
+          <Box p='5px 15px' _hover={{background:"#57BB99",color:'#004D40'}} fontWeight='bolder' color='#1976D2'>
+            <Text className="nav-link home">HOME</Text>
           </Box>
           <Box p='5px 15px' _hover={{background:"#57BB99",color:'#004D40'}} fontWeight='bolder' color='white'>
-            <Text>ABOUT</Text>
+            <Text className="nav-link about">ABOUT</Text>
           </Box>
           <Box p='5px 15px' _hover={{background:"#57BB99",color:'#004D40'}} fontWeight='bolder' color='white'>
-            <Text>SKILLS</Text>
+            <Text className="nav-link skills">SKILLS</Text>
           </Box>
           <Box p='5px 15px' _hover={{background:"#57BB99",color:'#004D40'}} fontWeight='bolder' color='white'>
-            <Text>PROJECTS</Text>
+            <Text className="nav-link projects">PROJECTS</Text>
           </Box>
           <Box p='5px 15px' _hover={{background:"#57BB99",color:'#004D40'}} fontWeight='bolder' color='white'>
-            <Text>CONTACT</Text>
+            <Text className="nav-link contact">CONTACT</Text>
           </Box>
           <Box p='5px 15px' _hover={{background:"#57BB99",color:'#004D40'}} fontWeight='bolder' color='white'>
-            <Text>RESUME</Text>
+           <a href='./../Banner/Sumat-Mallick-Resume.pdf' download> <Text className="nav-link resume" id="resume-button-1">RESUME</Text></a>
           </Box>
 
           </Flex>
         </Flex>
         </Box>
-        <Box bg='#65CCB7' pt='5px' pb='15px' top='0px' position='fixed' w='100%'  display={{base:'block',sm:'block',md:'block',lg:'none'}}>
+        <Box  backdropFilter='auto' backdropBlur='10px' pt='5px' pb='15px' top='0px' position='fixed' w='100%'  display={{base:'block',sm:'block',md:'block',lg:'none'}}>
           <Flex  w='92%' m='auto' textAlign='center' justify='space-between' align='center' mt='10px'>
              {/* for icon  */}
              <Box w='25%' >
             <img width='50%' src={logo} />
              </Box>
     {/* for slider hamburger menu*/}
-          <Box w='5%' ref={btnRef} onClick={onOpen}>
-            <img  src="https://cdn-icons-png.flaticon.com/512/2613/2613045.png"/>
+          <Box  w='5%' ref={btnRef} onClick={onOpen}>
+            <HamburgerIcon color='white' fontSize='35px'/>
           </Box>  
           </Flex>
         </Box>
         <Drawer placement='right' onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
-        <DrawerContent mt='70px' bg='#65CCB7'>
+        <DrawerContent mt={{base:'12%',sm:'9%' , md:'8%'  }} backdropFilter='auto' background='' backdropBlur='10px' pt='5px'>
           <DrawerBody>
 
-            <Box p='5px 15px' _hover={{background:"#57BB99",color:'#004D40'}} fontWeight='bolder' color='white' m='10px 0'>
+            <Box p='5px 15px' bg='#57BB99' color='#004D40'fontWeight='bolder'  m='10px 0'>
               <Text>HOME</Text>
             </Box>
-            <Box p='5px 15px' _hover={{background:"#57BB99",color:'#004D40'}} fontWeight='bolder' color='white'  m='10px 0' >
+            <Box p='5px 15px' bg='#57BB99' color='#004D40' fontWeight='bolder'   m='10px 0' >
               <Text>ABOUT</Text>
             </Box>
-            <Box p='5px 15px' _hover={{background:"#57BB99",color:'#004D40'}} fontWeight='bolder' color='white'  m='10px 0'>
+            <Box p='5px 15px' bg='#57BB99' color='#004D40' fontWeight='bolder'   m='10px 0'>
               <Text>SKILLS</Text>
             </Box>
-            <Box p='5px 15px' _hover={{background:"#57BB99",color:'#004D40'}} fontWeight='bolder' color='white'  m='10px 0'>
+            <Box p='5px 15px' bg='#57BB99' color='#004D40' fontWeight='bolder'   m='10px 0'>
               <Text>PROJECTS</Text>
             </Box>
-            <Box p='5px 15px' _hover={{background:"#57BB99",color:'#004D40'}} fontWeight='bolder' color='white'  m='10px 0'>
+            <Box p='5px 15px' bg='#57BB99' color='#004D40' fontWeight='bolder'   m='10px 0'>
               <Text>CONTACT</Text>
             </Box>
-            <Box p='5px 15px' _hover={{background:"#57BB99",color:'#004D40'}} fontWeight='bolder' color='white'  m='10px 0'>
-              <Text>RESUME</Text>
+            <Box p='5px 15px' bg='#57BB99' color='#004D40' fontWeight='bolder'   m='10px 0'>
+            <a href='./../Banner/Sumat-Mallick-Resume.pdf' download> <Text className="nav-link resume" id="resume-button-1">RESUME</Text></a>
             </Box>
 
           </DrawerBody>
