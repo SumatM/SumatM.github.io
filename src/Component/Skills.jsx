@@ -79,7 +79,7 @@ export default function Skills(){
             {/* typescript */}
             <Box bg='white' w='60%' p='10px' className="skills-card">
             <Box>
-                <img src="https://w7.pngwing.com/pngs/915/519/png-transparent-typescript-hd-logo-thumbnail.png" />
+                <img className="skills-card-img" src="https://w7.pngwing.com/pngs/915/519/png-transparent-typescript-hd-logo-thumbnail.png" />
             </Box>
             <Box alignContent='center' p='15px'>
             <Heading size='md' color='#563D67' letterSpacing='1.2px' className="skills-card-name">Typescript</Heading>

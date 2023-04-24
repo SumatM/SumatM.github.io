@@ -6,19 +6,24 @@ import {
     DrawerOverlay,
     DrawerContent,
     DrawerBody,
-    useDisclosure
+    useDisclosure,
+    Button
   } from '@chakra-ui/react'
 import { useRef} from 'react'
 import logo from './sumat-low-resolution-logo-color-on-transparent-background.png'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import resume from './../Banner/Sumat-Mallick-Resume.pdf'
-
+import { Navigate,Link } from 'react-router-dom'
 
   
   export const NavBar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = useRef()
    
+
+    function handleContact(){
+      return <Navigate to="/contact"/>
+    }
 
    return (<Box id="nav-menu">
         <Box  backdropFilter='auto' backdropBlur='10px' pt='5px' pb='15px' top='0px' position='fixed' w='100%'  display={{base:'none',sm:'none',md:'none',lg:'inline-block'}} zIndex='99'>
@@ -31,19 +36,19 @@ import resume from './../Banner/Sumat-Mallick-Resume.pdf'
           <Flex   w='55%' justify='space-between' letterSpacing='1px' >
 
           <Box p='5px 15px' _hover={{background:"#57BB99",color:'#004D40'}} fontWeight='bolder' color='#1976D2'>
-            <Text className="nav-link home">HOME</Text>
+            <a href='#about'><Text className="nav-link home">HOME</Text></a>
           </Box>
           <Box p='5px 15px' _hover={{background:"#57BB99",color:'#004D40'}} fontWeight='bolder' color='white'>
-            <Text className="nav-link about">ABOUT</Text>
+            <a href='#about'><Text className="nav-link about">ABOUT</Text></a>
           </Box>
           <Box p='5px 15px' _hover={{background:"#57BB99",color:'#004D40'}} fontWeight='bolder' color='white'>
-            <Text className="nav-link skills">SKILLS</Text>
+            <a href="#skills"><Text className="nav-link skills">SKILLS</Text></a>
           </Box>
           <Box p='5px 15px' _hover={{background:"#57BB99",color:'#004D40'}} fontWeight='bolder' color='white'>
-            <Text className="nav-link projects">PROJECTS</Text>
+            <a href="#projects"><Text className="nav-link projects">PROJECTS</Text></a>
           </Box>
           <Box p='5px 15px' _hover={{background:"#57BB99",color:'#004D40'}} fontWeight='bolder' color='white'>
-            <Text className="nav-link contact">CONTACT</Text>
+            <a href='#contact'><Text className="nav-link contact" onClick={handleContact}>CONTACT</Text></a>
           </Box>
           <Box p='5px 15px' _hover={{background:"#57BB99",color:'#004D40'}} fontWeight='bolder' color='white'>
            <a href='./../Banner/Sumat-Mallick-Resume.pdf' download> <Text className="nav-link resume" id="resume-button-1">RESUME</Text></a>
@@ -85,7 +90,7 @@ import resume from './../Banner/Sumat-Mallick-Resume.pdf'
               <Text>CONTACT</Text>
             </Box>
             <Box p='5px 15px' bg='#57BB99' color='#004D40' fontWeight='bolder'   m='10px 0'>
-            <a href='./../Banner/Sumat-Mallick-Resume.pdf' download> <Text className="nav-link resume" id="resume-button-1">RESUME</Text></a>
+            <a href='./../Banner/Sumat-Mallick-Resume.pdf' download> <Button><Text className="nav-link resume" id="resume-button-1">RESUME</Text></Button></a>
             </Box>
 
           </DrawerBody>
