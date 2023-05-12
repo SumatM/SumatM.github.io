@@ -8,7 +8,7 @@ import {AiFillLinkedin,AiFillGithub} from 'react-icons/ai'
 export default function Footer(){
 
     return (
-        <Box textAlign='center'  p='20px' bg="#2F2FA1" mb='200px' id='contact'>
+        <Box textAlign='center'  p='20px' bg="#2F2FA1"  id='contact'>
 {/*------- footer containter=------ */}
             <Box p='40px 20px' w='97%' m='auto' textAlign='center' borderTop='1px solid #FF9398'>
                 <Box >
@@ -119,7 +119,6 @@ export default function Footer(){
                        <Button w='80%' background='none' color='white' outline="1px solid #FF9398" 
                         _hover={{background:'#FF9398'}} borderRadius='0px' mt='10px'>Submit</Button>
                        </Box>
-
                     </FormControl>
                      </Box>
                 </Flex>

@@ -12,7 +12,7 @@ import {
 import { useRef} from 'react'
 import logo from './sumat-low-resolution-logo-color-on-transparent-background.png'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import resume from './../Banner/Sumat-Mallick-Resume.pdf'
+import resume from './../Banner//Sumat-Mallick-Resume.pdf'
 import { Navigate,Link } from 'react-router-dom'
 
   
@@ -50,8 +50,11 @@ import { Navigate,Link } from 'react-router-dom'
           <Box p='5px 15px' _hover={{background:"#57BB99",color:'#004D40'}} fontWeight='bolder' color='white'>
             <a href='#contact'><Text className="nav-link contact" onClick={handleContact}>CONTACT</Text></a>
           </Box>
-          <Box p='5px 15px' _hover={{background:"#57BB99",color:'#004D40'}} fontWeight='bolder' color='white'>
-           <a href='./../Banner/Sumat-Mallick-Resume.pdf' download> <Text className="nav-link resume" id="resume-button-1">RESUME</Text></a>
+          <Box p='5px 15px' _hover={{background:"#57BB99",color:'#004D40'}} className="nav-link resume" fontWeight='bolder' color='white'>
+           <a href={resume} target='_blank' download="Sumat-Mallick-Resume" id="resume-link-1"  >
+           <Button background='none' color='white' outline="1px solid #FF9398" 
+            _hover={{background:'#FF9398'}} borderRadius='0px' mt='10px' id="resume-button-1">Resume</Button>
+            </a>
           </Box>
 
           </Flex>
@@ -90,7 +93,7 @@ import { Navigate,Link } from 'react-router-dom'
               <Text>CONTACT</Text>
             </Box>
             <Box p='5px 15px' bg='#57BB99' color='#004D40' fontWeight='bolder'   m='10px 0'>
-            <a href='./../Banner/Sumat-Mallick-Resume.pdf' download> <Button><Text className="nav-link resume" id="resume-button-1">RESUME</Text></Button></a>
+            <a href={resume} target='_blank' download="Sumat-Mallick-Resume"> <Button><Text className="nav-link resume" id="resume-button-1">RESUME</Text></Button></a>
             </Box>
 
           </DrawerBody>

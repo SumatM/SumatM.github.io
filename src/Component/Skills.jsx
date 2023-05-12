@@ -49,7 +49,7 @@ export default function Skills(){
 
             <Box bg='white' w='60%' p='10px' className="skills-card">
             <Box>
-                <img className="skills-card-img" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/redux-icon.png" />
+                <img className="skills-card-img" src="https://img.uxwing.com/wp-content/themes/uxwing/download/brands-social-media/redux-icon.png" />
             </Box>
             <Box alignContent='center' p='15px'>
             <Heading size='md' color='#563D67' className="skills-card-name">Redux</Heading>

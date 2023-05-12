@@ -41,7 +41,7 @@ export default function GitCalender(){
                     <img id="github-stats-card" src='https://github-readme-stats.vercel.app/api?username=SumatM'/>
                 </Box>
                 <Box >
-            <img id="github-streak-stats"  src="https://github-readme-streak-stats.herokuapp.com?user=SumatM&theme=neon-blurange"/>
+            <img id="github-streak-stats"  src="https://github-readme-streak-stats.herokuapp.com?user=SumatM"/>
             </Box>
             </Flex>
             
