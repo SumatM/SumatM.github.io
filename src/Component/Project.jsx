@@ -4,14 +4,14 @@ import { Box, Button, Flex, FormControl, FormLabel, Grid, Heading, Input, Text, 
 export default function Project(){
     
 
-    return (<Box bg="#242582" p='45px' id='projects'>
+    return (<Box bg="#242582" p='45px' id='projects' >
             <Box w='97%' m='auto' textAlign='center' borderTop='1px solid #FF9398'>
-            <Box pt='25px'>
-                <Heading color='#FF9398' size='2xl'>Project</Heading>
+            <Box pt='55px'>
+                <Heading color='#FF9398' size='2xl'>PROJECTS</Heading>
             </Box>
-            <Grid templateColumns='repeat(2,1fr)' gap='80px' mt='45px'>
+            <Grid templateColumns={{base:'repeat(1,1fr)',sm:'repeat(1,1fr)',md:'repeat(1,1fr)',lg:'repeat(2,1fr)'}} gap='80px' mt='45px' w="100%" >
                 {/* 1st project  */}
-                <Box  textAlign='left' color='white' className="project-card">
+                <Box  textAlign='left' color='white' className="project-card" w="95%" >
                     <Box>
                     <Heading p='15px 0' size='lg' color='#FF9398' className="project-title">SPARTAN</Heading>
                     </Box>
@@ -30,18 +30,18 @@ export default function Project(){
                      {/* tech Stack */}
                         <Box w='95%' m='auto' className="project-tech-stack">
                             <Heading size="sm" p='10px 0' color='#FF9398'>Tech Stack</Heading>
-                        <Grid templateColumns="repeat(4,1fr)" textAlign='center'>
+                        <Grid gap='25px' templateColumns={{base:'repeat(2,1fr)',sm:'repeat(3,1fr)',md:'repeat(4,1fr)'}} textAlign='center'  w={{base:"70%",sm:"80%",md:"80%",lg:'90%'}} m="auto" >
                                 {/* react */}
-                        <Box bg='white' p='10px' mr='25px'>
+                        <Box bg='white'  p='15px' >
                             <Box>
                                 <img src="https://cdn.iconscout.com/icon/free/png-256/react-2752089-2284906.png" />
                             </Box>
-                            <Box alignContent='center' p='10px'>
+                            <Box alignContent='center' >
                             <Text fonSize='md' color='#563D67' fontWeight='500' >React</Text>
                             </Box>
                         </Box>
                         {/* chakra Ui */}
-                        <Box bg='white'  mr='25px'>
+                        <Box bg='white'  >
                         <Box>
                             <img src="https://img.icons8.com/color/512/chakra-ui.png" />
                         </Box>
@@ -50,7 +50,7 @@ export default function Project(){
                         </Box>
                         </Box>
                         {/* JavaScript */}
-                        <Box bg='white' mr='25px'>
+                        <Box bg='white' >
                         <Box>
                             <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" />
                         </Box>
@@ -59,7 +59,7 @@ export default function Project(){
                         </Box>
                         </Box>
                         {/* CSS */}
-                        <Box bg='white'  mr='25px' p='5px'>
+                        <Box bg='white'   p='5px'>
                         <Box>
                             <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" />
                         </Box>
@@ -88,11 +88,11 @@ export default function Project(){
                 
                 {/* 2nd project  */}
 
-                <Box  textAlign='left' color='white' className="project-card">
+                <Box  textAlign='left' color='white' className="project-card" w="95%">
                     <Box>
                     <Heading p='15px 0' size='lg' color='#FF9398' className="project-title">INDIAN STATES</Heading>
                     </Box>
-                    <Box>
+                    <Box overflow="hidden">
                     <img src="https://raw.githubusercontent.com/SumatM/Indian-States/main/UI%20images/Screenshot%20(596).png"/>
                     </Box>
                     <Box p='15px 0'>
@@ -100,12 +100,12 @@ export default function Project(){
                     <Text>Indian States offers a convenient shopping experience with a user-friendly interface and a wide range of products from various brands. Customers can easily find what they are looking for, and can also filter products based on their preferences such as size, color, and price. 
                     </Text>
                      </Box>
-                     {/* tech Stack */}
+        {/* tech Stack */}
                         <Box w='95%' m='auto' className="project-tech-stack">
                             <Heading size="sm" p='10px 0' color='#FF9398'>Tech Stack</Heading>
-                        <Grid templateColumns="repeat(4,1fr)" textAlign='center'>
+                        <Grid gap='25px' templateColumns={{base:'repeat(2,1fr)',sm:'repeat(3,1fr)',md:'repeat(3,1fr)'}} textAlign='center'  w={{base:"62%",sm:"70%",md:"55%",lg:'67%'}} m="auto">
                                 {/* HTML */}
-                        <Box bg='white' p='10px' mr='25px'>
+                        <Box bg='white'  p='10px'>
                             <Box>
                                 <img src="https://cdn-icons-png.flaticon.com/512/919/919827.png" />
                             </Box>
@@ -114,7 +114,7 @@ export default function Project(){
                             </Box>
                         </Box>
                         {/* JavaScript */}
-                        <Box bg='white' mr='25px'>
+                        <Box bg='white' >
                         <Box>
                             <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" />
                         </Box>
@@ -123,7 +123,7 @@ export default function Project(){
                         </Box>
                         </Box>
                         {/* CSS */}
-                        <Box bg='white'  mr='25px' p='5px'>
+                        <Box bg='white'   p='5px'>
                         <Box>
                             <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" />
                         </Box>

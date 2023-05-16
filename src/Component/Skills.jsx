@@ -3,43 +3,43 @@ import { Box, Grid, Heading, Text } from "@chakra-ui/react";
 
 export default function Skills(){
 
-    return (<Box bg="#242582" p='45px' id='skills'>
-        <Box  textAlign='center' w='97%' margin='auto' borderTop='1px solid #FF9398' >
+    return (<Box bg="#242582" p={{base:'20px',sm:'15px',md:'45px'}} id='skills' pb='50px'>
+        <Box  textAlign='center' w='97%' margin='auto' borderTop='1px solid #FF9398' p={{base:'25px'}}>
             <Box p='35px' >
             <Heading color='#FF9398' >SKILLS</Heading>
             </Box>
-            <Grid gap='25px' templateColumns='repeat(4, 1fr)'>
+            <Grid gap={{base:'15px',sm:'20px',md:'45px',lg:'85px'}} templateColumns={{base:'repeat(2,1fr)',sm:'repeat(3,1fr)',md:'repeat(4,1fr)',lg:'repeat(5,1fr)'}}>
             {/* HTML5 */}
-            <Box bg='white' w='60%' p='10px' className="skills-card" >
+            <Box bg='white'  p='10px' className="skills-card" >
             <Box>
-                <img className="skills-card-img" src="https://cdn-icons-png.flaticon.com/512/919/919827.png" />
+                <img className="skills-card-img" style={{width:'100%'}} src="https://cdn-icons-png.flaticon.com/512/919/919827.png" />
             </Box>
             <Box alignContent='center' p='15px'>
             <Heading size='md' color='#563D67' className="skills-card-name">HTML5</Heading>
             </Box>
             </Box>
             {/* css */}
-            <Box bg='white' w='60%' p='10px' className="skills-card">
+            <Box bg='white' p='10px' className="skills-card">
             <Box>
-                <img className="skills-card-img" src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" />
+                <img className="skills-card-img" style={{width:'100%'}} src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" />
             </Box>
             <Box alignContent='center' p='15px'>
             <Heading size='md' color='#563D67' className="skills-card-name">CSS</Heading>
             </Box>
             </Box>
             {/* js */}
-            <Box bg='white' w='60%' p='10px' className="skills-card">
+            <Box bg='white' p='10px' className="skills-card">
             <Box>
-                <img className="skills-card-img" src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" />
+                <img className="skills-card-img" style={{width:'100%'}} src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" />
             </Box>
             <Box alignContent='center' p='15px'>
             <Heading size='md' color='#563D67' letterSpacing='1.1px' className="skills-card-name">JavaScript</Heading>
             </Box>
             </Box>
             {/* chakra Ui */}
-            <Box bg='white' w='60%' p='10px'  className="skills-card">
+            <Box bg='white' p='10px'  className="skills-card">
             <Box>
-                <img className="skills-card-img" src="https://img.icons8.com/color/512/chakra-ui.png" />
+                <img className="skills-card-img" style={{width:'100%'}} src="https://img.icons8.com/color/512/chakra-ui.png" />
             </Box>
             <Box alignContent='center' p='15px'>
             <Heading size='md' color='#563D67' className="skills-card-name">Chakra UI</Heading>
@@ -47,9 +47,9 @@ export default function Skills(){
             </Box>
             {/* redux */}
 
-            <Box bg='white' w='60%' p='10px' className="skills-card">
+            <Box bg='white' p='10px' className="skills-card">
             <Box>
-                <img className="skills-card-img" src="https://img.uxwing.com/wp-content/themes/uxwing/download/brands-social-media/redux-icon.png" />
+                <img className="skills-card-img" style={{width:'100%'}} src="https://img.uxwing.com/wp-content/themes/uxwing/download/brands-social-media/redux-icon.png" />
             </Box>
             <Box alignContent='center' p='15px'>
             <Heading size='md' color='#563D67' className="skills-card-name">Redux</Heading>
@@ -57,9 +57,9 @@ export default function Skills(){
             </Box>
 
             {/* git */}
-            <Box bg='white' w='60%' p='10px' className="skills-card">
+            <Box bg='white' p='10px' className="skills-card">
             <Box>
-                <img className="skills-card-img" src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" />
+                <img className="skills-card-img" style={{width:'100%'}} src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" />
             </Box>
             <Box alignContent='center' p='15px'>
             <Heading size='md' color='#563D67' className="skills-card-name">Git</Heading>
@@ -68,18 +68,18 @@ export default function Skills(){
 
              {/* react */}
 
-             <Box bg='white' w='60%' p='10px' className="skills-card">
+             <Box bg='white' p='10px' className="skills-card">
             <Box>
-                <img className="skills-card-img" src="https://cdn.iconscout.com/icon/free/png-256/react-2752089-2284906.png" />
+                <img className="skills-card-img" style={{width:'100%'}} src="https://cdn.iconscout.com/icon/free/png-256/react-2752089-2284906.png" />
             </Box>
             <Box alignContent='center' p='15px'>
             <Heading size='md' color='#563D67' className="skills-card-name">React</Heading>
             </Box>
             </Box>
             {/* typescript */}
-            <Box bg='white' w='60%' p='10px' className="skills-card">
+            <Box bg='white' p='10px' className="skills-card">
             <Box>
-                <img className="skills-card-img" src="https://w7.pngwing.com/pngs/915/519/png-transparent-typescript-hd-logo-thumbnail.png" />
+                <img className="skills-card-img" style={{width:'100%'}} src="https://w7.pngwing.com/pngs/915/519/png-transparent-typescript-hd-logo-thumbnail.png" />
             </Box>
             <Box alignContent='center' p='15px'>
             <Heading size='md' color='#563D67' letterSpacing='1.2px' className="skills-card-name">Typescript</Heading>

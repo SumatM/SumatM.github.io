@@ -36,18 +36,18 @@ export default function GitCalender(){
                
             />
             </Box>
-            <Flex  mt='40px' justify='space-around'>
+            <Flex  mt='40px' flexDirection={{base:'column',sm:'column',md:'column',lg:'row'}} alignItems='center' gap='25px'>
                 <Box >
-                    <img id="github-stats-card" src='https://github-readme-stats.vercel.app/api?username=SumatM'/>
+                    <img display="block" id="github-stats-card" src='https://github-readme-stats.vercel.app/api?username=SumatM'/>
                 </Box>
                 <Box >
-            <img id="github-streak-stats"  src="https://github-readme-streak-stats.herokuapp.com?user=SumatM"/>
+            <img style={{display:'block'}} id="github-streak-stats"  src="https://github-readme-streak-stats.herokuapp.com?user=SumatM"/>
             </Box>
             </Flex>
             
-            <Box  w='30%' m='auto' mt='40px'>
-              <img width='150%' id="github-top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SumatM"/>
-                </Box>
+            <Flex  mt='40px'  justifyContent='center'>
+              <img width='50%' display="block" id="github-top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SumatM"/>
+                </Flex>
             </Box>
         </Box>
     )
