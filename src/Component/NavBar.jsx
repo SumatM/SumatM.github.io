@@ -45,12 +45,6 @@ import { Navigate,Link } from 'react-router-dom'
           <Box p='5px 15px' _hover={{color:'#4DB6AC'}} fontWeight='bolder' color='#00796B'>
             <a href='#contact'><Text className="nav-link contact" onClick={handleContact}>CONTACT</Text></a>
           </Box>
-          {/* <Box p='5px 15px'  className="nav-link resume" fontWeight='bolder' color='#00796B'>
-           <a href={resume} target='_blank' download="Sumat-Mallick-Resume" id="resume-link-1"  >
-           <Button background='none' color='#00796B' outline="1px solid #FF9398" 
-            _hover={{background:'#FF9398',color:'white'}} borderRadius='0px' mt='10px' id="resume-button-1">Resume</Button>
-            </a>
-          </Box> */}
 
           </Flex>
         </Box>

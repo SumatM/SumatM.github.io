@@ -46,9 +46,18 @@ export default function  Intro(){
             </motion.div></a>
             </Box>
             </Flex>
-            </Box>
+    </Box>
 
-    <Flex pt='75px' pb='50px'  
+    <Box position='sticky' top='150' right='100'  bg='red' display='inline'>
+        <Box p='5px 15px'  className="nav-link resume" fontWeight='bolder' color='#00796B'>
+           <a href={resume} target='_blank' download="Sumat-Mallick-Resume" id="resume-link-1"  >
+           <Button background='none' color='#00796B' outline="1px solid #26A69A" 
+            _hover={{background:'#26A69A',color:'white'}} borderRadius='0px' mt='10px' id="resume-button-1">Resume</Button>
+            </a>
+          </Box>
+    </Box>
+
+    <Flex pt={{base:'10px',sm:'15px'}} pb='50px'  
          margin='auto' flexDirection={{base:'column',sm:'column',md:'column'}} w='90%'>
 
         <Flex w={{base:'90%',sm:'75%',md:'50%'}} p='10px' margin='auto'  flexDirection='column' justify='center' align='center' textAlign='center' >
