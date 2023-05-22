@@ -1,40 +1,81 @@
-import {Box, Text,Button, Heading, Flex}  from '@chakra-ui/react' 
+import {Box, Text,Button, Heading, Flex, Image}  from '@chakra-ui/react' 
 import imgOlive from './../Banner/IMG20220220130528FAce_edited-removebg-previewOlive.png'
 import resume from './../Banner//Sumat-Mallick-Resume.pdf'
 import {motion} from 'framer-motion'
+import { useContext } from 'react'
+import { ThemeContext } from './ThemeContext'
+import { FaUserCircle } from 'react-icons/fa'
+import { IoMdCall } from 'react-icons/io'
+import { MdEmail } from 'react-icons/md'
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 
-export default function Intro(){
 
+export default function  Intro(){
 
+    const theme = useContext(ThemeContext)
 
     return (
-    <Box id="about" className='about section'>
-    <Flex pt='85px' pb='50px' bg="#2F2FA1"  margin='auto' flexDirection={{base:'column',sm:'column',md:'row'}}>
-        <Box w={{base:'90%',sm:'75%',md:'50%'}} p='20px' margin='auto' >
-            <Box mb='10px'>
-            <Text fontWeight='bold' color="white" fontSize='3xl'>Hi, I am <Text fontSize='4xl' display='inline' color='#FF9398' id="user-detail-name">Sumat Mallick</Text>,</Text>
-            <Box>
-            <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?weight=800&size=30&pause=1000&color=F78D9C&background=FFFFFF00&center=true&vCenter=true&width=435&lines=A+Full+Stack+Web+Developer;A+Problem+Solver" alt="Typing SVG" /></a>
-            </Box>
-            </Box>
-            <Flex w={{base:'100%',sm:'70%',md:"80%",lg:'70%'}} mt="20px" margin='auto' >
-            <motion.div  whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }} >
-                         <img  className="home-img" style={{borderRadius:'50%',width:'80%',display:'block'}}  src={imgOlive}/>
-                    </motion.div>
-            </Flex>
-        
+    <Box id="home" className='about section' background={theme.bg}>
+    
+    <Box  p='15px' display={{base:'none',sm:'none',md:'block'}} position='fixed' left='0' top='180' >
 
-        
-        
-        </Box>
+            {/* Email */}
+            <Flex  mt='15px' justify='start' >
+            <motion.div whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}  style={{width:'10%'}}>
+            <MdEmail color='#26A69A' size='25px'/>
+            </motion.div>
+            </Flex>
+            {/* linkedin */}
+            <Flex  mt='25px' >
+            <Box w='10%'>
+                <a target="_blank" href="https://www.linkedin.com/in/sumat-mallick-65b966227/">                       
+                <motion.div whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}  style={{width:'10%'}}>
+            <AiFillLinkedin color='#26A69A' size='25px'/>
+            </motion.div></a>
+            </Box>
+            </Flex>
+            {/* github */}
+            <Flex  mt='25px' >
+            <Box w='10%'>
+                <a target="_blank"  href="https://github.com/SumatM">                       
+                <motion.div whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}  style={{width:'10%'}}>
+            <AiFillGithub color='#26A69A' size='25px'/>
+            </motion.div></a>
+            </Box>
+            </Flex>
+            </Box>
+
+    <Flex pt='75px' pb='50px'  
+         margin='auto' flexDirection={{base:'column',sm:'column',md:'column'}} w='90%'>
+
+        <Flex w={{base:'90%',sm:'75%',md:'50%'}} p='10px' margin='auto'  flexDirection='column' justify='center' align='center' textAlign='center' >
+            <Box mb='10px'   >
+            <Text fontWeight='bold' color="#00796B" fontSize='2xl'>Hello, I am</Text>
+            <Box mt='15px'>
+            <Text fontWeight='500' fontSize='55px' display='inline' color='#00796B' id="user-detail-name" letterSpacing='2px'>Sumat Mallick</Text>
+            </Box>
+            <Box mt='15px' >
+           <img src="https://readme-typing-svg.demolab.com?weight=400&size=25&pause=1000&color=26A69A&background=FFFFFF00&center=true&vCenter=true&width=435&lines=A+Full+Stack+Web+Developer;A+Problem+Solver" alt="Typing SVG" />
+            </Box>
+            </Box>
+            
+        </Flex>
 
         {/* about me */}
         
-        <Box w={{base:'90%',sm:'75%',md:'50%'}} p='10px' m='auto' textAlign={{base:'center',sm:'center',md:'left'}} >
-        <Heading color='#FF9398'>About Me</Heading>
-        <Box>
-            <Text id="user-detail-intro" letterSpacing='1px' color='white'>An aspiring Full Stack Web Developer with a passion for
+        <Flex id='about' w={{base:'90%',sm:'75%',md:'50%'}} p='10px' m='auto' borderTop="1.5px solid #00796B" flexDirection='column' justify='center' align='center' textAlign='center' >
+        <Flex mt='15px' w={{base:'100%',sm:'70%',md:"80%",lg:'50%'}} >
+            <motion.div  whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }} >
+                         <Image _hover={{boxShadow: "rgba(218, 165, 32, 0.4) 0px 5px, rgba(218, 165, 32, 0.3) 0px 10px, rgba(218, 165, 32, 0.2) 0px 15px, rgba(218, 165, 32, 0.1) 0px 20px, rgba(218, 165, 32, 0.05) 0px 25px"}}  className="home-img" style={{borderRadius:'50% 50% 50% 50% / 75% 75% 25% 25%',width:'80%'}} m='auto' src={imgOlive}/>
+                    </motion.div>
+            </Flex>
+        <Heading color='#00796B' mt='25px'>About Me</Heading>
+        <Box mt='5px'>
+            <Text id="user-detail-intro" letterSpacing='1px' >An aspiring Full Stack Web Developer with a passion for
             MERN Stack development and proficiency in HTML, CSS,
             JavaScript, React, Redux, and ChakraUI is seeking
             opportunities to work in organizations that can
@@ -43,12 +84,12 @@ export default function Intro(){
             exceptional results</Text>
         </Box>
         <Box p='5px 15px' className="nav-link resume" fontWeight='bolder' color='white'>
-           <a href={resume} target='_blank' download="Sumat-Mallick-Resume" id="resume-link-1"  >
-           <Button background='none' color='white' outline="1px solid #FF9398" 
-            _hover={{background:'#FF9398'}} borderRadius='0px' mt='10px' id="resume-button-1">Resume</Button>
+           <a href={resume} target='_blank' download="Sumat-Mallick-Resume" id="resume-link-2">
+           <Button background='none' color='#26A69A' outline="1px solid #26A69A" 
+            _hover={{background:'#26A69A',color:'white'}} borderRadius='0px' mt='10px' id="resume-button-2">Resume</Button>
             </a>
           </Box>
-        </Box>
+        </Flex>
     </Flex>
     </Box>)
 }
