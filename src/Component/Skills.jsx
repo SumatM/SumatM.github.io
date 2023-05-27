@@ -6,12 +6,13 @@ export default function Skills() {
   const theme = useContext(ThemeContext);
 
   return (
-    <Box bg={theme.bg} p={{ base: "20px", sm: "15px", md: "45px" }} id="skills" pb="50px">
-      <Box textAlign="center"  margin="auto" borderTop="1px solid #00796B" p={{ base: "25px" }}>
+    <Box bg={theme.bg} p={{ base: "5px", sm: "10px", md: "45px" }} id="skills" pb="50px">
+    <Box w='80%'  margin="auto" borderTop="1.5px solid #00796B"></Box>
+      <Box textAlign="center"   margin="auto"  p={{ base: "25px" }}>
         <Box p="35px">
           <Heading color="#00796B">SKILLS</Heading>
         </Box>
-        <Grid gap={{ base: "15px", sm: "10px", md: "25px", lg: "25px" }} templateColumns={{ base: "repeat(2,1fr)", sm: "repeat(3,1fr)", md: "repeat(4,1fr)", lg: "repeat(5,1fr)" }}  m='auto' w={{base:'100%',sm:'100%',md:'100%',lg:'77%'}} >
+        <Grid gap={{ base: "15px", sm: "10px", md: "25px", lg: "25px" }} templateColumns={{ base: "repeat(2,1fr)", sm: "repeat(3,1fr)", md: "repeat(4,1fr)", lg: "repeat(5,1fr)" }}  m='auto' w={{base:'100%',sm:'100%',md:'100%',lg:'77%'}}  >
           {/* HTML5 */}
           <Box  bg="white" p="10px" className="skills-card">
             <Flex justifyContent="center">

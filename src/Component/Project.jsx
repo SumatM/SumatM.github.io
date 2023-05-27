@@ -7,8 +7,10 @@ export default function Project(){
     
     const theme = useContext(ThemeContext)
 
-    return (<Box bg={theme.bg} p='45px' id='projects' >
-            <Box w='97%' m='auto' textAlign='center' borderTop='1px solid #00796B'>
+    return (<Box bg={theme.bg} p={{ base: "15px", sm: "20px", md: "45px" }} id='projects' >
+     <Box w='80%' margin="auto" borderTop="1.5px solid #00796B">
+     </Box>
+            <Box m='auto' textAlign='center' >
             <Box pt='55px'>
                 <Heading color='#00796B' size='2xl'>PROJECTS</Heading>
             </Box>
@@ -18,11 +20,14 @@ export default function Project(){
                     <Box>
                     <Heading p='15px 0' size='lg' color='#00796B' className="project-title">SPARTAN</Heading>
                     </Box>
-                    <Box w={{base:'115%',sm:'100%'}}>
+                    <Box pb='25px' w='80%' borderTop="1.5px solid #00796B"></Box>
+
+                    <Box w={{base:'105%',sm:'100%'}}>
                     <img style={{width:'100%'}} src="https://raw.githubusercontent.com/SumatM/Spartan/main/readmeImages/Screenshot%20(504).png"/>
                     </Box>
                     <Box p='15px 0'>
                     <Text fontWeight='bold' m='5px 0' color='#00796B'>Charles Tyrwhitt Clone</Text>
+                    <Box pb='15px' w='60%' borderTop="1.5px solid #00796B"></Box>
                     <Text color='black' className="project-description">Spartan is a website dedicated to men's fashion, with a
                         focus on formal wear. The website provides a platform
                         for customers to create their own customized clothing,
@@ -33,6 +38,7 @@ export default function Project(){
                      {/* tech Stack */}
                      <Box w='95%' m='auto' className="project-tech-stack">
   <Heading size="sm" p='10px 0' color='#00796B'>Tech Stack</Heading>
+  <Box pb='15px' w='60%' borderTop="1.5px solid #00796B"></Box>
   <Grid gap='25px' templateColumns={{base:'repeat(2,1fr)',sm:'repeat(3,1fr)',md:'repeat(4,1fr)'}} textAlign='center'  w={{base:"70%",sm:"80%",md:"80%",lg:'90%'}} m="auto">
             {/* react */}
             <Box bg='white'  p='15px' >
@@ -95,17 +101,20 @@ export default function Project(){
                     <Box>
                     <Heading p='15px 0' size='lg' color='#00796B' className="project-title">INDIAN STATES</Heading>
                     </Box>
-                    <Box  w={{base:'115%',sm:'100%'}}>
+                    <Box pb='25px' w='80%' borderTop="1.5px solid #00796B"></Box>
+                    <Box  w={{base:'105%',sm:'100%'}}>
                     <img src="https://raw.githubusercontent.com/SumatM/Indian-States/main/UI%20images/Screenshot%20(596).png"/>
                     </Box>
                     <Box p='15px 0'>
                     <Text className="project-description" color='#00796B' fontWeight='bold' m='5px 0'>Clone of American Eagle</Text>
+                    <Box pb='15px' w='60%' borderTop="1.5px solid #00796B"></Box>
                     <Text color='black'>Indian States offers a convenient shopping experience with a user-friendly interface and a wide range of products from various brands. Customers can easily find what they are looking for, and can also filter products based on their preferences such as size, color, and price. 
                     </Text>
                      </Box>
         {/* tech Stack */}
         <Box w='95%' m='auto' className="project-tech-stack">
   <Heading size="sm" p='10px 0' color='#00796B'>Tech Stack</Heading>
+  <Box pb='15px' w='60%' borderTop="1.5px solid #00796B"></Box>
   <Grid gap='25px' templateColumns={{base:'repeat(2,1fr)',sm:'repeat(3,1fr)',md:'repeat(3,1fr)'}} textAlign='center'  w={{base:"62%",sm:"70%",md:"55%",lg:'67%'}} m="auto">
     {/* HTML */}
     <Box bg='white'  p='10px'>
@@ -159,7 +168,8 @@ export default function Project(){
                     <Box>
                     <Heading p='15px 0' size='lg' color='#00796B' className="project-title">SpendWiser</Heading>
                     </Box>
-                    <Box w={{base:'115%',sm:'100%'}}>
+                    <Box pb='25px' w='80%' borderTop="1.5px solid #00796B"></Box>
+                    <Box w={{base:'105%',sm:'100%'}}>
                     <img style={{width:'100%'}} src="https://user-images.githubusercontent.com/112808279/238118882-e4441c6a-8b1e-418d-b228-7132e40a40d4.png"/>
                     </Box>
                     <Box p='15px 0'>
@@ -169,6 +179,7 @@ export default function Project(){
                      {/* tech Stack */}
                      <Box w='95%' m='auto' className="project-tech-stack">
       <Heading size="sm" p='10px 0' color='#00796B'>Tech Stack</Heading>
+      <Box pb='15px' w='60%' borderTop="1.5px solid #00796B"></Box>
       <Grid gap='25px' templateColumns={{base:'repeat(2,1fr)',sm:'repeat(3,1fr)',md:'repeat(4,1fr)'}} textAlign='center'  w={{base:"70%",sm:"80%",md:"80%",lg:'90%'}} m="auto">
             {/* react */}
             <Box bg='white'  p='15px' >
@@ -231,16 +242,21 @@ export default function Project(){
                     <Box>
                     <Heading p='15px 0' size='lg' color='#00796B' className="project-title">Diamonland</Heading>
                     </Box>
-                    <Box w={{base:'115%',sm:'100%'}}>
+                    <Box pb='25px' w='80%' borderTop="1.5px solid #00796B"></Box>
+                    <Box w={{base:'105%',sm:'100%'}}>
                     <img style={{width:'100%'}} src="https://raw.githubusercontent.com/chaudhari014/legit-building-8885/main/banner/Screenshot%20(672).png"/>
                     </Box>
+                    
                     <Box p='15px 0'>
+                    <Text fontWeight='bold' m='5px 0' color='#00796B'>CaratLane Clone</Text>
+                    <Box pb='15px' w='60%' borderTop="1.5px solid #00796B"></Box>
                     <Text color='black' className="project-description">Diamondland is an e-commerce website specializing in jewelry, offering customers a wide range of high-quality jewelry at affordable prices. They also provide personalized gift options for your loved ones.
                     </Text>
                      </Box>
                      {/* tech Stack */}
                      <Box w='95%' m='auto' className="project-tech-stack">
   <Heading size="sm" p='10px 0' color='#00796B'>Tech Stack</Heading>
+  <Box pb='15px' w='60%' borderTop="1.5px solid #00796B"></Box>
   <Grid gap='25px' templateColumns={{base:'repeat(2,1fr)',sm:'repeat(3,1fr)',md:'repeat(3,1fr)'}} textAlign='center'  w={{base:"62%",sm:"70%",md:"55%",lg:'67%'}} m="auto">
     {/* HTML */}
     <Box bg='white'  p='10px'>
@@ -276,7 +292,7 @@ export default function Project(){
                     <Box  m='15px 0'>
                         <Flex justify='space-around'>
                             <Box>
-                                <a target='_blank' href="https:https://github.com/chaudhari014/legit-building-8885"><Button className="project-github-link"  background='none' color='#00796B' outline="1px solid #00796B" 
+                                <a target='_blank' href="https://github.com/chaudhari014/legit-building-8885"><Button className="project-github-link"  background='none' color='#00796B' outline="1px solid #00796B" 
             _hover={{background:'#26A69A',color:'white'}}borderRadius='0px' mt='10px'>GitHub</Button></a>
                             </Box>
                             <Box>

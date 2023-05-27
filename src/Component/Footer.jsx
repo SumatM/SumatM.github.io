@@ -1,24 +1,31 @@
-import { Box, Button, Flex, FormControl, FormLabel, Grid, Heading, Input, Text, Textarea } from "@chakra-ui/react";
+import { Box, Button, Flex, FormControl, FormLabel, Grid, Heading, Input, Spacer, Text, Textarea } from "@chakra-ui/react";
 import {motion} from 'framer-motion'
 import {FaUserCircle} from 'react-icons/fa';
 import {IoMdCall} from 'react-icons/io'
 import {MdEmail} from 'react-icons/md'
+import {BsFillArrowUpSquareFill} from 'react-icons/bs'
 import {AiFillLinkedin,AiFillGithub} from 'react-icons/ai'
 import { ThemeContext } from "./ThemeContext";
 import { useContext } from "react";
+import { animateScroll as scroll } from "react-scroll";
 
 export default function Footer(){
 
   const theme = useContext(ThemeContext);
 
+  function handleMoveToTop() {
+    scroll.scrollToTop(); 
+  }
+
     return (
-        <Box textAlign='center'  p='20px' bg={theme.bg}  id='contact'>
+        <Box textAlign='center'  p='15px' bg={theme.bg}  id='contact'>
+         <Box w='80%'  margin="auto" borderTop="1.5px solid #00796B"></Box>
 {/*------- footer containter=------ */}
-            <Box p='40px 20px'  m='auto' textAlign='center' borderTop='1px solid #FF9398'>
+            <Box p='40px 20px'  m='auto' textAlign='center'>
                 <Box >
                 <Heading color='#00796B'>Contact Me</Heading></Box>
-                <Grid  gridTemplateColumns={{base:'repeat(1,1fr)',sm:'repeat(1,1fr)',md:'repeat(2,1fr)'}}>
-                    <Box  p='25px'  >
+                <Grid  gridTemplateColumns={{base:'repeat(1,1fr)',sm:'repeat(1,1fr)',md:'repeat(2,1fr)'}} >
+                    <Box   p={{base:'0',sm:'25px'}} >
                     {/* my details */}
                     <Flex  mt='15px' justify='start' >
                     <motion.div whileHover={{ scale: 1.1 }}
@@ -82,7 +89,7 @@ export default function Footer(){
                     </Flex>
                     </Box>
  {/*--------------- form-------------------- */}
-                    <Box   p='25px'>
+                    <Box   p={{base:'0',sm:'25px'}} zIndex='2'>
                     <FormControl >
                         <Flex mt='15px'>
                         <Box w='30%'>
@@ -120,12 +127,16 @@ export default function Footer(){
 
                         </Box>
                        <Box  p='25px' w='40%' ml='18%' textAlign='left'>
-                       <Button w='80%' background='none' color='#00796B' outline="1px solid #00796B" 
+                       <Button w={{base:'100%',sm:'80%'}} background='none' color='#00796B' outline="1px solid #00796B" 
             _hover={{background:'#26A69A',color:'white'}}borderRadius='0px' mt='10px'>Submit</Button>
                        </Box>
                     </FormControl>
                      </Box>
                 </Grid>
+                <Flex flexDirection='column' alignItems='center' >
+              <BsFillArrowUpSquareFill onClick={handleMoveToTop} size="35px" color="#00796B"/>
+              <Text color="#00796B" fontWeight='bold'>Top</Text>
+          </Flex>
             </Box>
         </Box>
     )
