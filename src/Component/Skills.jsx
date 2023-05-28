@@ -1,4 +1,5 @@
 import { Box, Flex, Grid, Heading, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import { ThemeContext } from "./ThemeContext";
 import { useContext } from "react";
 
@@ -7,14 +8,23 @@ export default function Skills() {
 
   return (
     <Box bg={theme.bg} p={{ base: "5px", sm: "10px", md: "45px" }} id="skills" pb="50px">
-    <Box w='80%'  margin="auto" borderTop="1.5px solid #00796B"></Box>
-      <Box textAlign="center"   margin="auto"  p={{ base: "25px" }}>
+      <Box w='80%'  margin="auto" borderTop="1.5px solid #00796B"></Box>
+      <Box textAlign="center" margin="auto" p={{ base: "25px" }}>
         <Box p="35px">
           <Heading color="#00796B">SKILLS</Heading>
         </Box>
-        <Grid gap={{ base: "15px", sm: "10px", md: "25px", lg: "25px" }} templateColumns={{ base: "repeat(2,1fr)", sm: "repeat(3,1fr)", md: "repeat(4,1fr)", lg: "repeat(5,1fr)" }}  m='auto' w={{base:'100%',sm:'100%',md:'100%',lg:'77%'}}  >
+        <Grid
+          gap={{ base: "15px", sm: "10px", md: "25px", lg: "25px" }}
+          templateColumns={{ base: "repeat(2,1fr)", sm: "repeat(3,1fr)", md: "repeat(4,1fr)", lg: "repeat(5,1fr)" }}
+          m='auto'
+          w={{base:'100%',sm:'100%',md:'100%',lg:'77%'}}
+        >
           {/* HTML5 */}
-          <Box  bg="white" p="10px" className="skills-card">
+          <motion.div
+            drag
+            whileHover={{ scale: 1.05, boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.3)" }}
+            className="skills-card"
+          >
             <Flex justifyContent="center">
               <img className="skills-card-img" style={{ width: "40%" }} src="https://cdn-icons-png.flaticon.com/512/919/919827.png" />
             </Flex>
@@ -23,9 +33,13 @@ export default function Skills() {
                 HTML5
               </Heading>
             </Box>
-          </Box>
-          {/* css */}
-          <Box bg="white" p="10px" className="skills-card">
+          </motion.div>
+          {/* CSS */}
+          <motion.div
+            drag
+            whileHover={{ scale: 1.05, boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.3)" }}
+            className="skills-card"
+          >
             <Flex justifyContent="center">
               <img className="skills-card-img" style={{ width: "40%" }} src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" />
             </Flex>
@@ -34,9 +48,13 @@ export default function Skills() {
                 CSS
               </Heading>
             </Box>
-          </Box>
-          {/* js */}
-          <Box bg="white" p="10px" className="skills-card">
+          </motion.div>
+          {/* JavaScript */}
+          <motion.div
+            drag
+            whileHover={{ scale: 1.05, boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.3)" }}
+            className="skills-card"
+          >
             <Flex justifyContent="center">
               <img className="skills-card-img" style={{ width: "40%" }} src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" />
             </Flex>
@@ -45,9 +63,13 @@ export default function Skills() {
                 JavaScript
               </Heading>
             </Box>
-          </Box>
-          {/* chakra Ui */}
-          <Box bg="white" p="10px" className="skills-card">
+          </motion.div>
+          {/* Chakra UI */}
+          <motion.div
+            drag
+            whileHover={{ scale: 1.05, boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.3)" }}
+            className="skills-card"
+          >
             <Flex justifyContent="center">
               <img className="skills-card-img" style={{ width: "40%" }} src="https://img.icons8.com/color/512/chakra-ui.png" />
             </Flex>
@@ -56,9 +78,13 @@ export default function Skills() {
                 Chakra UI
               </Heading>
             </Box>
-          </Box>
-          {/* redux */}
-          <Box bg="white" p="10px" className="skills-card">
+          </motion.div>
+          {/* Redux */}
+          <motion.div
+            drag
+            whileHover={{ scale: 1.05, boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.3)" }}
+            className="skills-card"
+          >
             <Flex justifyContent="center">
               <img className="skills-card-img" style={{ width: "40%" }} src="https://img.uxwing.com/wp-content/themes/uxwing/download/brands-social-media/redux-icon.png" />
             </Flex>
@@ -67,9 +93,13 @@ export default function Skills() {
                 Redux
               </Heading>
             </Box>
-          </Box>
-          {/* git */}
-          <Box bg="white" p="10px" className="skills-card">
+          </motion.div>
+          {/* Git */}
+          <motion.div
+            drag
+            whileHover={{ scale: 1.05, boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.3)" }}
+            className="skills-card"
+          >
             <Flex justifyContent="center">
               <img className="skills-card-img" style={{ width: "40%" }} src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" />
             </Flex>
@@ -78,9 +108,13 @@ export default function Skills() {
                 Git
               </Heading>
             </Box>
-          </Box>
-          {/* react */}
-          <Box bg="white" p="10px" className="skills-card">
+          </motion.div>
+          {/* React */}
+          <motion.div
+            drag
+            whileHover={{ scale: 1.05, boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.3)" }}
+            className="skills-card"
+          >
             <Flex justifyContent="center">
               <img className="skills-card-img" style={{ width: "40%" }} src="https://cdn.iconscout.com/icon/free/png-256/react-2752089-2284906.png" />
             </Flex>
@@ -89,9 +123,13 @@ export default function Skills() {
                 React
               </Heading>
             </Box>
-          </Box>
-          {/* typescript */}
-          <Box bg="white" p="10px" className="skills-card">
+          </motion.div>
+          {/* TypeScript */}
+          <motion.div
+            drag
+            whileHover={{ scale: 1.05, boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.3)" }}
+            className="skills-card"
+          >
             <Flex justifyContent="center">
               <img className="skills-card-img" style={{ width: "40%" }} src="https://w7.pngwing.com/pngs/915/519/png-transparent-typescript-hd-logo-thumbnail.png" />
             </Flex>
@@ -100,9 +138,13 @@ export default function Skills() {
                 TypeScript
               </Heading>
             </Box>
-          </Box>
-          {/* express */}
-          <Box bg="white" p="10px" className="skills-card">
+          </motion.div>
+          {/* Express */}
+          <motion.div
+            drag
+            whileHover={{ scale: 1.05, boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.3)" }}
+            className="skills-card"
+          >
             <Flex justifyContent="center">
               <img className="skills-card-img" style={{ width: "40%" }} src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT-Z4-b5_nW5k3bO7rgZ09JvnHZTA0I_FHLu4OscCKDv4MDEp6B" />
             </Flex>
@@ -111,9 +153,13 @@ export default function Skills() {
                 Express
               </Heading>
             </Box>
-          </Box>
-          {/* mongodb */}
-          <Box bg="white" p="10px" className="skills-card">
+          </motion.div>
+          {/* MongoDB */}
+          <motion.div
+            drag
+            whileHover={{ scale: 1.05, boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.3)" }}
+            className="skills-card"
+          >
             <Flex justifyContent="center">
               <img className="skills-card-img" style={{ width: "40%" }} src="https://devkico.itexto.com.br/wp-content/uploads/2013/10/mongodb-leaf-300x300.png" />
             </Flex>
@@ -122,9 +168,13 @@ export default function Skills() {
                 MongoDB
               </Heading>
             </Box>
-          </Box>
-          {/* node */}
-          <Box bg="white" p="10px" className="skills-card">
+          </motion.div>
+          {/* Node.js */}
+          <motion.div
+            drag
+            whileHover={{ scale: 1.05, boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.3)" }}
+            className="skills-card"
+          >
             <Flex justifyContent="center">
               <img className="skills-card-img" style={{ width: "40%" }} src="https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png" />
             </Flex>
@@ -133,7 +183,7 @@ export default function Skills() {
                 Node.js
               </Heading>
             </Box>
-          </Box>
+          </motion.div>
         </Grid>
       </Box>
     </Box>
