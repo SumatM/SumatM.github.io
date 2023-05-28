@@ -2,15 +2,12 @@ import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import imgOlive from './../Banner/IMG20220220130528FAce_edited-removebg-previewOlive.png'
 import resume from './../Banner//Sumat-Mallick-Resume.pdf'
 import {motion} from 'framer-motion'
-import { useContext } from "react";
-import { ThemeContext } from "./ThemeContext";
 
 export default function About(){
 
-    const theme = useContext(ThemeContext)
 
     return (
-        <Box bg={theme.bg} >
+        <Box  >
             <Flex id='about' className='section about' w={{base:'90%',sm:'75%',md:'50%'}} p='10px' m='auto' borderTop="1.5px solid #00796B" flexDirection='column' justify='center' align='center' textAlign='center' >
         <Flex mt='55px' w={{base:'100%',sm:'70%',md:"80%",lg:'50%'}} >
             <motion.div  whileHover={{ scale: 1.1 }}

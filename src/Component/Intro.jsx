@@ -1,14 +1,14 @@
-import { Box, Text, Button, Heading, Flex, Image } from '@chakra-ui/react'
-import { motion } from 'framer-motion'
-import { useContext } from 'react'
-import { ThemeContext } from './ThemeContext'
-import { MdEmail } from 'react-icons/md'
-import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
-import imgOlive from './../Banner/IMG20220220130528FAce_edited-removebg-previewOlive.png'
-import resume from './../Banner/Sumat-Mallick-Resume.pdf'
+import { Box, Text, Button, Flex, Image } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import { useContext } from 'react';
+import { ThemeContext } from './ThemeContext';
+import { MdEmail } from 'react-icons/md';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import imgOlive from './../Banner/IMG20220220130528FAce_edited-removebg-previewOlive.png';
+import resume from './../Banner/Sumat-Mallick-Resume.pdf';
 
 export default function Intro() {
-  const theme = useContext(ThemeContext)
+  const theme = useContext(ThemeContext);
 
   const container = {
     hidden: { opacity: 0 },
@@ -17,7 +17,7 @@ export default function Intro() {
       transition: {
         duration: 0.5,
         staggerChildren: 0.2,
-        when: "beforeChildren",
+        when: 'beforeChildren',
       },
     },
   };
@@ -32,41 +32,39 @@ export default function Intro() {
       variants={container}
       initial="hidden"
       animate="visible"
-      style={{ position: "relative" }}
     >
       <Box
         id="home"
         className="about section"
-        background={theme.bg}
+        background={theme && theme.bg}
         p="15px"
-        position="relative"
       >
-        <Box  p='15px' display={{base:'none',sm:'none',md:'block'}} position='fixed' left='0' top='35%' >
-        <motion.div variants={item}>
-          <Flex mt="15px" justify="start">
-            <MdEmail color="#26A69A" size="25px" />
-          </Flex>
-        </motion.div>
+        <Box p="15px" display={{ base: 'none', sm: 'none', md: 'block' }} position="fixed" left="0" top="35%">
+          <motion.div variants={item}>
+            <Flex mt="15px" justify="start">
+              <MdEmail color="#26A69A" size="25px" />
+            </Flex>
+          </motion.div>
 
-        <motion.div variants={item}>
-          <Flex mt="25px">
-            <Box w="10%">
-              <a target="_blank" href="https://www.linkedin.com/in/sumat-mallick-65b966227/">
-                <AiFillLinkedin color="#26A69A" size="25px" />
-              </a>
-            </Box>
-          </Flex>
-        </motion.div>
+          <motion.div variants={item}>
+            <Flex mt="25px">
+              <Box w="10%">
+                <a target="_blank" href="https://www.linkedin.com/in/sumat-mallick-65b966227/">
+                  <AiFillLinkedin color="#26A69A" size="25px" />
+                </a>
+              </Box>
+            </Flex>
+          </motion.div>
 
-        <motion.div variants={item}>
-          <Flex mt="25px">
-            <Box w="10%">
-              <a target="_blank" href="https://github.com/SumatM">
-                <AiFillGithub color="#26A69A" size="25px" />
-              </a>
-            </Box>
-          </Flex>
-        </motion.div>
+          <motion.div variants={item}>
+            <Flex mt="25px">
+              <Box w="10%">
+                <a target="_blank" href="https://github.com/SumatM">
+                  <AiFillGithub color="#26A69A" size="25px" />
+                </a>
+              </Box>
+            </Flex>
+          </motion.div>
         </Box>
 
         <Box position="fixed" top={{ base: '65%' }} display="inline">

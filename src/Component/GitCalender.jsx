@@ -1,17 +1,14 @@
 import { Box, Flex, Heading } from "@chakra-ui/react";
-import { useContext } from "react";
 import GitHubCalendar from 'react-github-calendar';
-import explicitTheme from 'react-github-calendar'
-import { ThemeContext } from "./ThemeContext";
+
 
 export default function GitCalender(){
 
-  const theme = useContext(ThemeContext);
 
 
 
     return (
-        <Box bg={theme.bg} pt='25px' textAlign='center'>
+        <Box  pt='25px' textAlign='center'>
          <Box w='80%'  margin="auto" borderTop="1.5px solid #00796B"></Box>
             <Heading p='25px' color='#00796B' size='2xl'>GitHub</Heading>
             <Box p='40px 20px' w='97%' m='auto' textAlign='center'>

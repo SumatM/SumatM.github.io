@@ -7,13 +7,14 @@ import Project from './Project';
 import GitCalender from './GitCalender';
 import { useContext } from 'react';
 import About from './About';
+import { ThemeContext } from "./ThemeContext";
 
 
 
 export default function Home(){
+    const theme = useContext(ThemeContext)
 
-
-    return (<Box id='home'>
+    return (<Box id='home' bg={theme.bg}>
         <NavBar />
         <Intro/>
         <About/>
