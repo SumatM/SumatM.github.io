@@ -24,6 +24,7 @@ export const NavBar = () => {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
+    
     const handleScroll = () => {
       const homeSection = document.getElementById('home');
       const aboutSection = document.getElementById('about');

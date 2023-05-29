@@ -9,7 +9,6 @@ import { ThemeContext } from "./ThemeContext";
 export default function About(){
 
     const theme = useContext(ThemeContext);
-   // console.log(theme.theme)
     return (
         <Box  >
             <Flex id='about' className='section about' w={{base:'90%',sm:'75%',md:'50%'}} p='10px' m='auto' borderTop="1.5px solid #00796B" flexDirection='column' justify='center' align='center' textAlign='center' >

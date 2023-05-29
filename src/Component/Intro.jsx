@@ -11,8 +11,6 @@ import {FcSettings} from 'react-icons/fc'
 export default function Intro() {
   const theme = useContext(ThemeContext);
 
-  console.log(theme.handleTheme)
-
   function handleDark(){
     theme.handleTheme("dark");
   }

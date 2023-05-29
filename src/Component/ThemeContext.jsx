@@ -18,7 +18,7 @@ export default function ThemeContextProvider({ children }) {
     },
     green: {
       bg: '#D4A59B',
-      dText: '#26A69A',
+      dText: '#00796B',
     }
   };
 
