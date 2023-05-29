@@ -8,7 +8,8 @@ import {
   DrawerContent,
   DrawerBody,
   useDisclosure,
-  Button
+  Button,
+  Spacer
 } from '@chakra-ui/react';
 import { useRef } from 'react';
 import logo from './sumat-low-resolution-logo-color-on-transparent-background.png';
@@ -109,10 +110,7 @@ export const NavBar = () => {
         w="100%"
         display={{ base: 'block', sm: 'block', md: 'block', lg: 'none' }}
       >
-        <Flex w="92%" m="auto" textAlign="center" justify="space-between" align="center" mt="10px">
-          <Box w="25%">
-            <img width="50%" src={logo} alt="Logo" />
-          </Box>
+        <Flex w="92%" m="auto" textAlign="center" justify="right" align="center" mt="10px" >
           <Box mr="10px" ref={btnRef} onClick={onOpen}>
             <HamburgerIcon color="#00796B" fontSize="35px" />
           </Box>
