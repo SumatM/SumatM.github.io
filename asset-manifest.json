@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.593cb7e4.js",
+    "main.js": "/static/js/main.39683e83.js",
     "static/js/787.b8549a5f.chunk.js": "/static/js/787.b8549a5f.chunk.js",
     "static/media/IMG_edited-removebg-previewOlive.png": "/static/media/IMG20220220130528FAce_edited-removebg-previewOlive.0122dc8b677935c3bd21.png",
     "static/media/Sumat-Mallick-Resume.pdf": "/static/media/Sumat-Mallick-Resume.0f807959dc64af36f818.pdf",
     "static/media/sumat-low-resolution-logo-color-on-transparent-background.png": "/static/media/sumat-low-resolution-logo-color-on-transparent-background.c45781dfcc0e2094210c.png",
     "index.html": "/index.html",
     "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.593cb7e4.js.map": "/static/js/main.593cb7e4.js.map",
+    "main.39683e83.js.map": "/static/js/main.39683e83.js.map",
     "787.b8549a5f.chunk.js.map": "/static/js/787.b8549a5f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.593cb7e4.js"
+    "static/js/main.39683e83.js"
   ]
 }
