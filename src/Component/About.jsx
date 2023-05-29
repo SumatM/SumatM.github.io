@@ -2,10 +2,14 @@ import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import imgOlive from './../Banner/IMG20220220130528FAce_edited-removebg-previewOlive.png'
 import resume from './../Banner//Sumat-Mallick-Resume.pdf'
 import {motion} from 'framer-motion'
+import { useContext } from "react";
+import { ThemeContext } from "./ThemeContext";
+
 
 export default function About(){
 
-
+    const theme = useContext(ThemeContext);
+   // console.log(theme.theme)
     return (
         <Box  >
             <Flex id='about' className='section about' w={{base:'90%',sm:'75%',md:'50%'}} p='10px' m='auto' borderTop="1.5px solid #00796B" flexDirection='column' justify='center' align='center' textAlign='center' >
@@ -17,7 +21,7 @@ export default function About(){
             </Flex>
         <Heading color='#00796B' mt='25px'>About Me</Heading>
         <Box mt='5px'>
-            <Text id="user-detail-intro" letterSpacing='1px' >An aspiring Full Stack Web Developer with a passion for
+            <Text id="user-detail-intro" letterSpacing='1px' color={theme.theme.dText}>An aspiring Full Stack Web Developer with a passion for
             MERN Stack development and proficiency in HTML, CSS,
             JavaScript, React, Redux, and ChakraUI is seeking
             opportunities to work in organizations that can

@@ -28,7 +28,7 @@ export default function Project(){
                     <Box p='15px 0'>
                     <Text fontWeight='bold' m='5px 0' color='#00796B'>Charles Tyrwhitt Clone</Text>
                     <Box pb='15px' w='60%' borderTop="1.5px solid #00796B"></Box>
-                    <Text color='black' className="project-description">Spartan is a website dedicated to men's fashion, with a
+                    <Text color={theme.theme.dText} className="project-description">Spartan is a website dedicated to men's fashion, with a
                         focus on formal wear. The website provides a platform
                         for customers to create their own customized clothing,
                         allowing them to tailor their clothing to fit their unique
@@ -108,7 +108,7 @@ export default function Project(){
                     <Box p='15px 0'>
                     <Text className="project-description" color='#00796B' fontWeight='bold' m='5px 0'>Clone of American Eagle</Text>
                     <Box pb='15px' w='60%' borderTop="1.5px solid #00796B"></Box>
-                    <Text color='black'>Indian States offers a convenient shopping experience with a user-friendly interface and a wide range of products from various brands. Customers can easily find what they are looking for, and can also filter products based on their preferences such as size, color, and price. 
+                    <Text color={theme.theme.dText}>Indian States offers a convenient shopping experience with a user-friendly interface and a wide range of products from various brands. Customers can easily find what they are looking for, and can also filter products based on their preferences such as size, color, and price. 
                     </Text>
                      </Box>
         {/* tech Stack */}
@@ -173,7 +173,7 @@ export default function Project(){
                     <img style={{width:'100%'}} src="https://user-images.githubusercontent.com/112808279/238118882-e4441c6a-8b1e-418d-b228-7132e40a40d4.png"/>
                     </Box>
                     <Box p='15px 0'>
-                    <Text color='black' className="project-description">SpendWiser is an invaluable tool for anyone looking to manage their monthly budget and keep track of their spending. With its user-friendly interface and comprehensive features, SpendWiser makes it easy to stay on top of your finances and ensure that you are meeting your financial goals.
+                    <Text color={theme.theme.dText} className="project-description">SpendWiser is an invaluable tool for anyone looking to manage their monthly budget and keep track of their spending. With its user-friendly interface and comprehensive features, SpendWiser makes it easy to stay on top of your finances and ensure that you are meeting your financial goals.
                     </Text>
                      </Box>
                      {/* tech Stack */}
@@ -250,7 +250,7 @@ export default function Project(){
                     <Box p='15px 0'>
                     <Text fontWeight='bold' m='5px 0' color='#00796B'>CaratLane Clone</Text>
                     <Box pb='15px' w='60%' borderTop="1.5px solid #00796B"></Box>
-                    <Text color='black' className="project-description">Diamondland is an e-commerce website specializing in jewelry, offering customers a wide range of high-quality jewelry at affordable prices. They also provide personalized gift options for your loved ones.
+                    <Text color={theme.theme.dText} className="project-description">Diamondland is an e-commerce website specializing in jewelry, offering customers a wide range of high-quality jewelry at affordable prices. They also provide personalized gift options for your loved ones.
                     </Text>
                      </Box>
                      {/* tech Stack */}

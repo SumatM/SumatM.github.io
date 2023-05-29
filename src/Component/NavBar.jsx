@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import {
   Box,
   Flex,
@@ -15,9 +16,43 @@ import { HamburgerIcon } from '@chakra-ui/icons';
 import resume from './../Banner//Sumat-Mallick-Resume.pdf';
 import { Link as ScrollLink } from 'react-scroll';
 
+
 export const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const homeSection = document.getElementById('home');
+      const aboutSection = document.getElementById('about');
+      const skillsSection = document.getElementById('skills');
+      const projectsSection = document.getElementById('projects');
+      const contactSection = document.getElementById('contact');
+
+      const scrollPosition = window.scrollY;
+     // console.log(scrollPosition,'scroll',contactSection.offsetTop)
+
+      if (scrollPosition >= contactSection.offsetTop) {
+        setActiveSection('contact');
+      } else if (scrollPosition >= projectsSection.offsetTop) {
+        setActiveSection('projects');
+      } else if (scrollPosition >= skillsSection.offsetTop) {
+        setActiveSection('skills');
+      } else if (scrollPosition >= aboutSection.offsetTop) {
+        setActiveSection('about');
+      } else {
+        setActiveSection('home');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
 
   return (
     <Box id="nav-menu">
@@ -37,27 +72,27 @@ export const NavBar = () => {
         borderRadius="25px"
       >
         <Flex w="70%" justify="space-between" letterSpacing="1px" m="auto">
-          <Box p="5px 15px" _hover={{ color: '#4DB6AC' }} fontWeight="bolder" color="#00796B">
+          <Box p="5px 15px" _hover={{ color: '#4DB6AC' }} fontWeight="bolder" color={activeSection === 'home' ? '#4DB6AC' : '#00796B'}>
             <ScrollLink to="home" smooth={true} duration={500} onClick={onClose}>
               <Text className="nav-link home">HOME</Text>
             </ScrollLink>
           </Box>
-          <Box p="5px 15px" _hover={{ color: '#4DB6AC' }} fontWeight="bolder" color="#00796B">
+          <Box p="5px 15px" _hover={{ color: '#4DB6AC' }} fontWeight="bolder" color={activeSection === 'about' ? '#4DB6AC' : '#00796B'}>
             <ScrollLink to="about" smooth={true} duration={500} onClick={onClose}>
               <Text className="nav-link about">ABOUT</Text>
             </ScrollLink>
           </Box>
-          <Box p="5px 15px" _hover={{ color: '#4DB6AC' }} fontWeight="bolder" color="#00796B">
+          <Box p="5px 15px" _hover={{ color: '#4DB6AC' }} fontWeight="bolder" color={activeSection === 'skills' ? '#4DB6AC' : '#00796B'}>
             <ScrollLink to="skills" smooth={true} duration={500} onClick={onClose}>
               <Text className="nav-link skills">SKILLS</Text>
             </ScrollLink>
           </Box>
-          <Box p="5px 15px" _hover={{ color: '#4DB6AC' }} fontWeight="bolder" color="#00796B">
+          <Box p="5px 15px" _hover={{ color: '#4DB6AC' }} fontWeight="bolder" color={activeSection === 'projects' ? '#4DB6AC' : '#00796B'}>
             <ScrollLink to="projects" smooth={true} duration={500} onClick={onClose}>
               <Text className="nav-link projects">PROJECTS</Text>
             </ScrollLink>
           </Box>
-          <Box p="5px 15px" _hover={{ color: '#4DB6AC' }} fontWeight="bolder" color="#00796B">
+          <Box p="5px 15px" _hover={{ color: '#4DB6AC' }} fontWeight="bolder" color={activeSection === 'contact' ? '#4DB6AC' : '#00796B'}>
             <ScrollLink to="contact" smooth={true} duration={500} onClick={onClose}>
               <Text className="nav-link contact">CONTACT</Text>
             </ScrollLink>
@@ -113,8 +148,8 @@ export const NavBar = () => {
               </ScrollLink>
             </Box>
             <Box p="5px 15px" className="nav-link resume" fontWeight="bolder" color="white">
-              <a href={resume} target="_blank" rel="noopener noreferrer" download="Sumat-Mallick-Resume">
-                <Button background="none" color="white" outline="1px solid #00796B" _hover={{ background: '#26A69A' }} borderRadius="0px" mt="10px">
+              <a href={resume} target="_blank" rel="noopener noreferrer" download="Sumat-Mallick-Resume" id="resume-link-1">
+                <Button background="none" color="white" outline="1px solid #00796B" _hover={{ background: '#26A69A' }} borderRadius="0px" mt="10px"  id="resume-button-1">
                   Resume
                 </Button>
               </a>

@@ -14,7 +14,7 @@ import { ThemeContext } from "./ThemeContext";
 export default function Home(){
     const theme = useContext(ThemeContext)
 
-    return (<Box id='home' bg={theme.bg}>
+    return (<Box id='home' bg={theme.theme.bg}>
         <NavBar />
         <Intro/>
         <About/>
