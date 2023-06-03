@@ -80,7 +80,7 @@ export default function Intro() {
             </Box>
       {/* green theme  */}
             <Box border='1px solid #00796B' borderRadius='50%' onClick={handleGreen}>
-            <Box  bg='#D4A59B' borderRadius='50%' m='3px' width='30px' height='30px'></Box>
+            <Box  bg='#E8F5E9' borderRadius='50%' m='3px' width='30px' height='30px'></Box>
             </Box>
 
             

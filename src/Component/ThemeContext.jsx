@@ -10,15 +10,15 @@ export default function ThemeContextProvider({ children }) {
     },
     dark: {
       bg: 'black',
-      dText: '#26A69A',
+      dText: '#B2DFDB',
     },
     blue: {
       bg: '#08105B',
-      dText: '#FFFFFF',
+      dText: '#E0F2F1',
     },
     green: {
-      bg: '#D4A59B',
-      dText: '#00796B',
+      bg: '#E8F5E9',
+      dText: 'black',
     }
   };
 
