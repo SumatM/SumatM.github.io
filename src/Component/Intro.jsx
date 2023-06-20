@@ -1,4 +1,4 @@
-import { Box, Text, Button, Flex, Image, Popover, PopoverTrigger, PopoverContent, PopoverBody } from '@chakra-ui/react';
+import { Box, Text, Button, Flex, Image, Popover, PopoverTrigger, PopoverContent, PopoverBody, Link } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { useContext } from 'react';
 import { ThemeContext } from './ThemeContext';
@@ -119,25 +119,6 @@ export default function Intro() {
             </Flex>
           </motion.div>
         </Box>
-
-        <Box position="fixed" top={{ base: '65%' }} display="inline">
-          <Box className="nav-link resume" fontWeight="bolder" color="#00796B">
-            <a href={resume} target="_blank" download="Sumat-Mallick-Resume" id="resume-link-1">
-              <Button
-                background="#00796B"
-                color="white"
-                outline="1px solid #26A69A"
-                _hover={{ background: 'none', color: '#26A69A' }}
-                borderRadius="0px"
-                mt="10px"
-                id="resume-button-1"
-              >
-                Resume
-              </Button>
-            </a>
-          </Box>
-        </Box>
-
         <Flex
           pt={{ base: '55px', sm: '45px', md: '55px' }}
           pb="50px"
