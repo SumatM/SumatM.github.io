@@ -87,7 +87,6 @@ export default function About() {
             </Button>
           </Link>
         </Box>
-        ``
       </Flex>
     </Box>
   );

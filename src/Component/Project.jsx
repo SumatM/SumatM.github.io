@@ -1,310 +1,901 @@
-import { Box, Button, Flex, FormControl, FormLabel, Grid, Heading, Input, Text, Textarea } from '@chakra-ui/react'
-import { ThemeContext } from './ThemeContext'
-import { useContext } from 'react'
+import {
+  Box,
+  Button,
+  Flex,
+  FormControl,
+  FormLabel,
+  Grid,
+  Heading,
+  Input,
+  Text,
+  Textarea,
+} from "@chakra-ui/react";
+import { ThemeContext } from "./ThemeContext";
+import { useContext, useRef } from "react";
+import { Link as ScrollLink } from "react-scroll";
 
+export default function Project() {
+  const mainTheme = useContext(ThemeContext);
 
-export default function Project(){
-    
-    const theme = useContext(ThemeContext)
+  const boxRef = useRef(null);
+  const moreProRef = useRef(null);
 
-    return (<Box bg={theme.bg} p={{ base: "15px", sm: "20px", md: "45px" }} id='projects' >
-     <Box w='80%' margin="auto" borderTop="1.5px solid #00796B">
-     </Box>
-            <Box m='auto' textAlign='center' >
-            <Box pt='55px'>
-                <Heading color='#00796B' size='2xl'>PROJECTS</Heading>
-            </Box>
-            <Grid templateColumns={{base:'repeat(1,1fr)',sm:'repeat(1,1fr)',md:'repeat(1,1fr)',lg:'repeat(2,1fr)'}} gap='80px' mt='45px' w="100%" >
-                {/* 1st project  */}
-                <Box  p='10px' textAlign='left' className="project-card" w="95%" >
-                    <Box>
-                    <Heading p='15px 0' size='lg' color='#00796B' className="project-title">SPARTAN</Heading>
-                    </Box>
-                    <Box pb='25px' w='80%' borderTop="1.5px solid #00796B"></Box>
+  function showBox() {
+    boxRef.current.style.display = "block";
+    moreProRef.current.style.display='none'
+  }
 
-                    <Box w={{base:'105%',sm:'100%'}}>
-                    <img style={{width:'100%'}} src="https://raw.githubusercontent.com/SumatM/Spartan/main/readmeImages/Screenshot%20(504).png"/>
-                    </Box>
-                    <Box p='15px 0'>
-                    <Text fontWeight='bold' m='5px 0' color='#00796B'>Charles Tyrwhitt Clone</Text>
-                    <Box pb='15px' w='60%' borderTop="1.5px solid #00796B"></Box>
-                    <Text color={theme.theme.dText} className="project-description">Spartan is a website dedicated to men's fashion, with a
-                        focus on formal wear. The website provides a platform
-                        for customers to create their own customized clothing,
-                        allowing them to tailor their clothing to fit their unique
-                        style and preferences.
-                    </Text>
-                     </Box>
-                     {/* tech Stack */}
-                     <Box w='95%' m='auto' className="project-tech-stack">
-  <Heading size="sm" p='10px 0' color='#00796B'>Tech Stack</Heading>
-  <Box pb='15px' w='60%' borderTop="1.5px solid #00796B"></Box>
-  <Grid gap='25px' templateColumns={{base:'repeat(2,1fr)',sm:'repeat(3,1fr)',md:'repeat(4,1fr)'}} textAlign='center'  w={{base:"70%",sm:"80%",md:"80%",lg:'90%'}} m="auto">
-            {/* react */}
-            <Box bg='white'  p='15px' >
-            <Flex justifyContent='center'>
-                <img src="https://cdn.iconscout.com/icon/free/png-256/react-2752089-2284906.png" style={{width:'40%'}}/>
-            </Flex>
-            <Box alignContent='center' >
-                <Text fonSize='md' color='#563D67' fontWeight='500' >React</Text>
-            </Box>
-            </Box>
-            {/* chakra Ui */}
-            <Box bg='white'>
-            <Flex justifyContent='center'>
-                <img src="https://img.icons8.com/color/512/chakra-ui.png" style={{width:'30%'}} />
-            </Flex>
-            <Box alignContent='center' p='10px' w='100%'>
-                <Text fontSize='12px' color='#563D67' fontWeight='500' >Chakra UI</Text>
-            </Box>
-            </Box>
-            {/* JavaScript */}
-            <Box bg='white'>
-            <Flex justifyContent='center'>
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" style={{width:'30%'}} />
-            </Flex>
-            <Box alignContent='center' p='10px' w='100%'>
-                <Text fontSize='sm' color='#563D67' fontWeight='600' >JavaScript</Text>
-            </Box>
-            </Box>
-            {/* CSS */}
-            <Box bg='white' p='5px'>
-            <Flex justifyContent='center'>
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" style={{width:'30%'}} />
-            </Flex>
-            <Box alignContent='center' p='10px' w='100%'>
-                <Text fontSize='md' color='#563D67' fontWeight='500' >CSS</Text>
-            </Box>
-            </Box>
-        </Grid>
+  function hideBox() {
+    boxRef.current.style.display = "none";
+    moreProRef.current.style.display='block'
+  }
+
+  return (
+    <Box
+      bg={mainTheme.theme.bg}
+      p={{ base: "15px", sm: "20px", md: "45px" }}
+      id="projects"
+    >
+      {/* bar for decoration  */}
+      <Box w="80%" margin="auto" borderTop="1.5px solid #00796B">
+        {/* box 1 for main projects  */}
+      </Box>
+      <Box m="auto" textAlign="center">
+        <Box pt="55px">
+          <Heading color="#00796B" size="2xl">
+            PROJECTS
+          </Heading>
         </Box>
+        <Grid
+          templateColumns={{
+            base: "repeat(1,1fr)",
+            sm: "repeat(1,1fr)",
+            md: "repeat(2,1fr)",
+            lg: "repeat(3,1fr)",
+          }}
+          gap=" 20px 40px"
+          mt="45px"
+        >
+          {/* 1st project  */}
+          <Box
+            p="0 20px"
+            textAlign="left"
+            className="project-card"
+            boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px;"
+            _hover={{ background: mainTheme.theme.hover }}
+          >
+            <Box>
+              <Heading
+                p="15px 0"
+                size="lg"
+                color="#00796B"
+                className="project-title"
+              >
+                SPARTAN
+              </Heading>
+            </Box>
+            <Box pb="25px" w="80%" borderTop="1.5px solid #00796B"></Box>
 
-                    {/* access links */}
-                    <Box  m='15px 0'>
-                        <Flex justify='space-around'>
-                            <Box>
-                                <a target='_blank' href="https://github.com/SumatM/Spartan"><Button className="project-github-link"  background='none' color='#00796B' outline="1px solid #00796B" 
-            _hover={{background:'#26A69A',color:'white'}}borderRadius='0px' mt='10px'>GitHub</Button></a>
-                            </Box>
-                            <Box>
-                            <a target='_blank' href="https://marvelous-crack-5191.vercel.app/"><Button className="project-deployed-link"  background='none' color='#00796B' outline="1px solid #00796B" 
-            _hover={{background:'#26A69A',color:'white'}}mt='10px' borderRadius='0'>Live Demo</Button></a>
-                                
-                            </Box>
-                        </Flex>
-                    </Box>
+            <Box w={{ base: "105%", sm: "100%" }}>
+              <img
+                style={{ width: "100%" }}
+                src="https://raw.githubusercontent.com/SumatM/Spartan/main/readmeImages/Screenshot%20(504).png"
+              />
+            </Box>
+            <Box p="15px 0">
+              <Text fontWeight="bold" m="5px 0" color="#00796B">
+                Charles Tyrwhitt Clone
+              </Text>
+              <Box w="60%" borderTop="1.5px solid #00796B"></Box>
+              <Text
+                color={mainTheme.theme.dText}
+                className="project-description"
+              >
+                Spartan is a website dedicated to men's fashion, with a focus on
+                formal wear. The website provides a platform for customers to
+                create their own customized clothing, allowing them to tailor
+                their clothing to fit their unique style and preferences.
+              </Text>
+            </Box>
+            {/* tech Stack */}
+            <Box className="project-tech-stack">
+              <Heading size="sm" color="#00796B">
+                Tech Stack
+              </Heading>
+              <Box w="60%" borderTop="1.5px solid #00796B"></Box>
+              <Grid
+                p="15px 0"
+                gap="15px"
+                templateColumns={{
+                  base: "repeat(2,1fr)",
+                  sm: "repeat(3,1fr)",
+                  md: "repeat(4,1fr)",
+                }}
+                textAlign="center"
+              >
+                {/* react */}
+                <Box>
+                  <Flex justifyContent="center">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+                      style={{ width: "75%" }}
+                    />
+                  </Flex>
                 </Box>
-                
-                {/* 2nd project  */}
-
-                <Box  textAlign='left' color='white' className="project-card" w="95%">
-                    <Box>
-                    <Heading p='15px 0' size='lg' color='#00796B' className="project-title">INDIAN STATES</Heading>
-                    </Box>
-                    <Box pb='25px' w='80%' borderTop="1.5px solid #00796B"></Box>
-                    <Box  w={{base:'105%',sm:'100%'}}>
-                    <img src="https://raw.githubusercontent.com/SumatM/Indian-States/main/UI%20images/Screenshot%20(596).png"/>
-                    </Box>
-                    <Box p='15px 0'>
-                    <Text className="project-description" color='#00796B' fontWeight='bold' m='5px 0'>Clone of American Eagle</Text>
-                    <Box pb='15px' w='60%' borderTop="1.5px solid #00796B"></Box>
-                    <Text color={theme.theme.dText}>Indian States offers a convenient shopping experience with a user-friendly interface and a wide range of products from various brands. Customers can easily find what they are looking for, and can also filter products based on their preferences such as size, color, and price. 
-                    </Text>
-                     </Box>
-        {/* tech Stack */}
-        <Box w='95%' m='auto' className="project-tech-stack">
-  <Heading size="sm" p='10px 0' color='#00796B'>Tech Stack</Heading>
-  <Box pb='15px' w='60%' borderTop="1.5px solid #00796B"></Box>
-  <Grid gap='25px' templateColumns={{base:'repeat(2,1fr)',sm:'repeat(3,1fr)',md:'repeat(3,1fr)'}} textAlign='center'  w={{base:"62%",sm:"70%",md:"55%",lg:'67%'}} m="auto">
-    {/* HTML */}
-    <Box bg='white'  p='10px'>
-      <Flex justifyContent='center'>
-        <img src="https://cdn-icons-png.flaticon.com/512/919/919827.png" style={{width:'30%'}} />
-      </Flex>
-      <Box alignContent='center' p='10px'>
-        <Text fonSize='md' color='#563D67' fontWeight='500' >HTML5</Text>
-      </Box>
-    </Box>
-    {/* JavaScript */}
-    <Box bg='white'>
-      <Flex justifyContent='center'>
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" style={{width:'30%'}} />
-      </Flex>
-      <Box alignContent='center' p='10px' w='100%'>
-        <Text fontSize='sm' color='#563D67' fontWeight='600' >JavaScript</Text>
-      </Box>
-    </Box>
-    {/* CSS */}
-    <Box bg='white' p='5px'>
-      <Flex justifyContent='center'>
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" style={{width:'30%'}} />
-      </Flex>
-      <Box alignContent='center' p='10px' w='100%'>
-        <Text fontSize='md' color='#563D67' fontWeight='500' >CSS</Text>
-      </Box>
-    </Box>
-  </Grid>
-      </Box>
-
-                    {/* access links */}
-                    <Box  m='15px 0'>
-                        <Flex justify='space-around'>
-                            <Box>
-                                <a target='_blank' href="https://github.com/SumatM/Indian-States"><Button className="project-github-link" background='none' color='#00796B' outline="1px solid #00796B" 
-            _hover={{background:'#26A69A',color:'white'}} borderRadius='0px' mt='10px'>GitHub</Button></a>
-                            </Box>
-                            <Box>
-                            <a target='_blank' href="https://indian-states.netlify.app/index.html"><Button className="project-deployed-link" background='none' color='#00796B' outline="1px solid #00796B" 
-            _hover={{background:'#26A69A',color:'white'}} mt='10px' borderRadius='0'>Live Demo</Button></a>
-                                
-                            </Box>
-                        </Flex>
-                    </Box>
+                {/* chakra Ui */}
+                <Box>
+                  <Flex justifyContent="center">
+                    <img
+                      src="https://img.icons8.com/color/512/chakra-ui.png"
+                      style={{ width: "75%" }}
+                    />
+                  </Flex>
                 </Box>
+                {/* JavaScript */}
+                <Box>
+                  <Flex justifyContent="center">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+                      style={{ width: "60%" }}
+                    />
+                  </Flex>
+                </Box>
+                {/* CSS */}
+                <Box>
+                  <Flex justifyContent="center">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png"
+                      style={{ width: "65%" }}
+                    />
+                  </Flex>
+                </Box>
+              </Grid>
+            </Box>
 
-                {/* 3rd project */}
+            {/* access links */}
+            <Box m="15px 0">
+              <Flex justify="space-around">
+                <Box>
+                  <a target="_blank" href="https://github.com/SumatM/Spartan">
+                    <Button
+                      className="project-github-link"
+                      background="none"
+                      color="#00796B"
+                      outline="1px solid #00796B"
+                      _hover={{ background: "#26A69A", color: "white" }}
+                      borderRadius="0px"
+                      mt="10px"
+                    >
+                      GitHub
+                    </Button>
+                  </a>
+                </Box>
+                <Box>
+                  <a
+                    target="_blank"
+                    href="https://marvelous-crack-5191.vercel.app/"
+                  >
+                    <Button
+                      className="project-deployed-link"
+                      background="none"
+                      color="#00796B"
+                      outline="1px solid #00796B"
+                      _hover={{ background: "#26A69A", color: "white" }}
+                      mt="10px"
+                      borderRadius="0"
+                    >
+                      Live Demo
+                    </Button>
+                  </a>
+                </Box>
+              </Flex>
+            </Box>
+          </Box>
 
-                <Box  p='10px' textAlign='left' className="project-card" w="95%" >
-                    <Box>
-                    <Heading p='15px 0' size='lg' color='#00796B' className="project-title">SpendWiser</Heading>
-                    </Box>
-                    <Box pb='25px' w='80%' borderTop="1.5px solid #00796B"></Box>
-                    <Box w={{base:'105%',sm:'100%'}}>
-                    <img style={{width:'100%'}} src="https://user-images.githubusercontent.com/112808279/238118882-e4441c6a-8b1e-418d-b228-7132e40a40d4.png"/>
-                    </Box>
-                    <Box p='15px 0'>
-                    <Text color={theme.theme.dText} className="project-description">SpendWiser is an invaluable tool for anyone looking to manage their monthly budget and keep track of their spending. With its user-friendly interface and comprehensive features, SpendWiser makes it easy to stay on top of your finances and ensure that you are meeting your financial goals.
-                    </Text>
-                     </Box>
-                     {/* tech Stack */}
-                     <Box w='95%' m='auto' className="project-tech-stack">
-      <Heading size="sm" p='10px 0' color='#00796B'>Tech Stack</Heading>
-      <Box pb='15px' w='60%' borderTop="1.5px solid #00796B"></Box>
-      <Grid gap='25px' templateColumns={{base:'repeat(2,1fr)',sm:'repeat(3,1fr)',md:'repeat(4,1fr)'}} textAlign='center'  w={{base:"70%",sm:"80%",md:"80%",lg:'90%'}} m="auto">
-            {/* react */}
-            <Box bg='white'  p='15px' >
-            <Flex justifyContent='center'>
-                <img src="https://cdn.iconscout.com/icon/free/png-256/react-2752089-2284906.png" style={{width:'40%'}}/>
-            </Flex>
-            <Box alignContent='center' >
-                <Text fonSize='md' color='#563D67' fontWeight='500' >React</Text>
+          {/* 2nd project  */}
+
+          <Box
+            p="0 20px"
+            textAlign="left"
+            color="white"
+            className="project-card"
+            boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px;"
+            _hover={{ background: mainTheme.theme.hover }}
+          >
+            <Box>
+              <Heading
+                p="15px 0"
+                size="lg"
+                color="#00796B"
+                className="project-title"
+              >
+                AṞIVU
+              </Heading>
             </Box>
+            <Box pb="25px" w="80%" borderTop="1.5px solid #00796B"></Box>
+            <Box w={{ base: "105%", sm: "100%" }}>
+              <img src="https://raw.githubusercontent.com/SumatM/Arivu/653364fa661bbda14f9070ea6f65bd6bf0412e32/frontend/public/Screenshot%20(711).png" />
             </Box>
-            {/* chakra Ui */}
-            <Box bg='white'>
-            <Flex justifyContent='center'>
-                <img src="https://img.icons8.com/color/512/chakra-ui.png" style={{width:'30%'}} />
-            </Flex>
-            <Box alignContent='center' p='10px' w='100%'>
-                <Text fontSize='12px' color='#563D67' fontWeight='500' >Chakra UI</Text>
+            <Box p="15px 0">
+              <Text
+                className="project-description"
+                color="#00796B"
+                fontWeight="bold"
+                m="5px 0"
+              >
+                Coursera Clone
+              </Text>
+              <Box w="60%" borderTop="1.5px solid #00796B"></Box>
+              <Text color={mainTheme.theme.dText}>
+                Arivu is an e-learning platform similar to Coursera. It allows
+                students, teachers, and site administrators to engage in live
+                lectures, post lectures, and perform daily activities. The
+                platform includes features for banning suspicious users,
+                ensuring a secure learning environment.
+              </Text>
             </Box>
+            {/* tech Stack */}
+            <Box m="auto" className="project-tech-stack">
+              <Heading size="sm" color="#00796B">
+                Tech Stack
+              </Heading>
+              <Box w="60%" borderTop="1.5px solid #00796B"></Box>
+              <Grid
+                p="15px 0"
+                gap="15px"
+                templateColumns={{
+                  base: "repeat(2,1fr)",
+                  sm: "repeat(3,1fr)",
+                  md: "repeat(4,1fr)",
+                }}
+                textAlign="center"
+              >
+                {/* Node */}
+                <Box >
+                  <Flex justifyContent="center">
+                    <img
+                      src="https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png"
+                      style={{ width: "100%" }}
+                    />
+                  </Flex>
+                </Box>
+                {/* Express */}
+                <Box>
+                  <Flex justifyContent="center">
+                    <img
+                      src="https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png"
+                      style={{ width: "60%" }}
+                    />
+                  </Flex>
+                </Box>
+                {/* mongoDB */}
+                <Box>
+                  <Flex justifyContent="center">
+                    <img
+                      src="https://devkico.itexto.com.br/wp-content/uploads/2013/10/mongodb-leaf-300x300.png"
+                      style={{ width: "65%" }}
+                    />
+                  </Flex>
+                </Box>
+              {/* react  */}
+                <Box>
+                  <Flex justifyContent="center">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+                      style={{ width: "75%" }}
+                    />
+                  </Flex>
+                </Box>
+                {/* chakra Ui */}
+                <Box>
+                  <Flex justifyContent="center">
+                    <img
+                      src="https://img.icons8.com/color/512/chakra-ui.png"
+                      style={{ width: "75%" }}
+                    />
+                  </Flex>
+                </Box>
+                {/* Tailwind */}
+                <Box>
+                  <Flex justifyContent="center">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png"
+                      style={{ width: "65%" }}
+                    />
+                  </Flex>
+                </Box>
+              </Grid>
             </Box>
-            {/* redux */}
-            <Box bg='white'>
-            <Flex justifyContent='center'>
-                <img src="https://img.uxwing.com/wp-content/themes/uxwing/download/brands-social-media/redux-icon.png" style={{width:'30%'}} />
-            </Flex>
-            <Box alignContent='center' p='10px' w='100%'>
-                <Text fontSize='sm' color='#563D67' fontWeight='600' >Redux</Text>
+
+            {/* access links */}
+            <Box m="15px 0">
+              <Flex justify="space-around">
+                <Box>
+                  <a
+                    target="_blank"
+                    href="https://github.com/SumatM/Arivu"
+                  >
+                    <Button
+                      className="project-github-link"
+                      background="none"
+                      color="#00796B"
+                      outline="1px solid #00796B"
+                      _hover={{ background: "#26A69A", color: "white" }}
+                      borderRadius="0px"
+                      mt="10px"
+                    >
+                      GitHub
+                    </Button>
+                  </a>
+                </Box>
+                <Box>
+                  <a
+                    target="_blank"
+                    href="https://puny-potato-4945.vercel.app/"
+                  >
+                    <Button
+                      className="project-deployed-link"
+                      background="none"
+                      color="#00796B"
+                      outline="1px solid #00796B"
+                      _hover={{ background: "#26A69A", color: "white" }}
+                      mt="10px"
+                      borderRadius="0"
+                    >
+                      Live Demo
+                    </Button>
+                  </a>
+                </Box>
+              </Flex>
             </Box>
+          </Box>
+
+          {/* 3rd project */}
+
+          <Box
+            p="0 20px"
+            textAlign="left"
+            color="white"
+            className="project-card"
+            boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px;"
+            _hover={{ background: mainTheme.theme.hover }}
+          >
+            <Box>
+              <Heading
+                p="15px 0"
+                size="lg"
+                color="#00796B"
+                className="project-title"
+              >
+                INDIAN STATES
+              </Heading>
             </Box>
-            {/* chart js */}
-            <Box bg='white' p='5px'>
-            <Flex justifyContent='center'>
-                <img src="https://www.richardwestenra.com/painting-with-data-talk/img/libs/recharts.png" style={{width:'100%'}} />
-            </Flex>
-            <Box alignContent='center' p='10px' w='100%'>
-                <Text fontSize='md' color='#563D67' fontWeight='500' >Recharts</Text>
+            <Box pb="25px" w="80%" borderTop="1.5px solid #00796B"></Box>
+            <Box w={{ base: "105%", sm: "100%" }}>
+              <img src="https://raw.githubusercontent.com/SumatM/Indian-States/main/UI%20images/Screenshot%20(596).png" />
             </Box>
+            <Box p="15px 0">
+              <Text
+                className="project-description"
+                color="#00796B"
+                fontWeight="bold"
+                m="5px 0"
+              >
+                American Eagle Clone
+              </Text>
+              <Box w="60%" borderTop="1.5px solid #00796B"></Box>
+              <Text color={mainTheme.theme.dText}>
+                Indian States offers a convenient shopping experience with a
+                user-friendly interface and a wide range of products from
+                various brands. Customers can easily find what they are looking
+                for, and can also filter products based on their preferences
+                such as size, color, and price.
+              </Text>
             </Box>
+            {/* tech Stack */}
+            <Box m="auto" className="project-tech-stack">
+              <Heading size="sm" color="#00796B">
+                Tech Stack
+              </Heading>
+              <Box w="60%" borderTop="1.5px solid #00796B"></Box>
+              <Grid
+                p="15px 0"
+                gap="15px"
+                templateColumns={{
+                  base: "repeat(2,1fr)",
+                  sm: "repeat(3,1fr)",
+                  md: "repeat(4,1fr)",
+                }}
+                textAlign="center"
+              >
+                {/* HTML */}
+                <Box p="10px">
+                  <Flex justifyContent="center">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/1532/1532556.png"
+                      style={{ width: "70%" }}
+                    />
+                  </Flex>
+                </Box>
+                {/* JavaScript */}
+                <Box>
+                  <Flex justifyContent="center">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+                      style={{ width: "60%" }}
+                    />
+                  </Flex>
+                </Box>
+                {/* CSS */}
+                <Box>
+                  <Flex justifyContent="center">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png"
+                      style={{ width: "65%" }}
+                    />
+                  </Flex>
+                </Box>
+              </Grid>
+            </Box>
+
+            {/* access links */}
+            <Box m="15px 0">
+              <Flex justify="space-around">
+                <Box>
+                  <a
+                    target="_blank"
+                    href="https://github.com/SumatM/Indian-States"
+                  >
+                    <Button
+                      className="project-github-link"
+                      background="none"
+                      color="#00796B"
+                      outline="1px solid #00796B"
+                      _hover={{ background: "#26A69A", color: "white" }}
+                      borderRadius="0px"
+                      mt="10px"
+                    >
+                      GitHub
+                    </Button>
+                  </a>
+                </Box>
+                <Box>
+                  <a
+                    target="_blank"
+                    href="https://indian-states.netlify.app/index.html"
+                  >
+                    <Button
+                      className="project-deployed-link"
+                      background="none"
+                      color="#00796B"
+                      outline="1px solid #00796B"
+                      _hover={{ background: "#26A69A", color: "white" }}
+                      mt="10px"
+                      borderRadius="0"
+                    >
+                      Live Demo
+                    </Button>
+                  </a>
+                </Box>
+              </Flex>
+            </Box>
+          </Box>
         </Grid>
+        <Box id="moreProject" mt="25px" ref={moreProRef}>
+          <button>
+            <Text fontWeight="bold" color="#00796B" onClick={showBox}>
+              More Project
+            </Text>
+          </button>
         </Box>
-
-                    {/* access links */}
-                    <Box  m='15px 0'>
-                        <Flex justify='space-around'>
-                            <Box>
-                                <a target='_blank' href="https://github.com/SumatM/SpendWiser"><Button className="project-github-link"  background='none' color='#00796B' outline="1px solid #00796B" 
-            _hover={{background:'#26A69A',color:'white'}}borderRadius='0px' mt='10px'>GitHub</Button></a>
-                            </Box>
-                            <Box>
-                            <a target='_blank' href="https://hilarious-wood-568-fw21-0275-updated1.vercel.app/"><Button className="project-deployed-link"  background='none' color='#00796B' outline="1px solid #00796B" 
-            _hover={{background:'#26A69A',color:'white'}}mt='10px' borderRadius='0'>Live Demo</Button></a>
-                                
-                            </Box>
-                        </Flex>
-                    </Box>
-                </Box>
-
-               {/* 4th project */}
-
-               <Box  p='10px' textAlign='left' className="project-card" w="95%" >
-                    <Box>
-                    <Heading p='15px 0' size='lg' color='#00796B' className="project-title">Diamonland</Heading>
-                    </Box>
-                    <Box pb='25px' w='80%' borderTop="1.5px solid #00796B"></Box>
-                    <Box w={{base:'105%',sm:'100%'}}>
-                    <img style={{width:'100%'}} src="https://raw.githubusercontent.com/chaudhari014/legit-building-8885/main/banner/Screenshot%20(672).png"/>
-                    </Box>
-                    
-                    <Box p='15px 0'>
-                    <Text fontWeight='bold' m='5px 0' color='#00796B'>CaratLane Clone</Text>
-                    <Box pb='15px' w='60%' borderTop="1.5px solid #00796B"></Box>
-                    <Text color={theme.theme.dText} className="project-description">Diamondland is an e-commerce website specializing in jewelry, offering customers a wide range of high-quality jewelry at affordable prices. They also provide personalized gift options for your loved ones.
-                    </Text>
-                     </Box>
-                     {/* tech Stack */}
-                     <Box w='95%' m='auto' className="project-tech-stack">
-  <Heading size="sm" p='10px 0' color='#00796B'>Tech Stack</Heading>
-  <Box pb='15px' w='60%' borderTop="1.5px solid #00796B"></Box>
-  <Grid gap='25px' templateColumns={{base:'repeat(2,1fr)',sm:'repeat(3,1fr)',md:'repeat(3,1fr)'}} textAlign='center'  w={{base:"62%",sm:"70%",md:"55%",lg:'67%'}} m="auto">
-    {/* HTML */}
-    <Box bg='white'  p='10px'>
-      <Flex justifyContent='center'>
-        <img src="https://cdn-icons-png.flaticon.com/512/919/919827.png" style={{width:'30%'}} />
-      </Flex>
-      <Box alignContent='center' p='10px'>
-        <Text fonSize='md' color='#563D67' fontWeight='500' >HTML5</Text>
-      </Box>
-    </Box>
-    {/* JavaScript */}
-    <Box bg='white'>
-      <Flex justifyContent='center'>
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" style={{width:'30%'}} />
-      </Flex>
-      <Box alignContent='center' p='10px' w='100%'>
-        <Text fontSize='sm' color='#563D67' fontWeight='600' >JavaScript</Text>
-      </Box>
-    </Box>
-    {/* CSS */}
-    <Box bg='white' p='5px'>
-      <Flex justifyContent='center'>
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" style={{width:'30%'}} />
-      </Flex>
-      <Box alignContent='center' p='10px' w='100%'>
-        <Text fontSize='md' color='#563D67' fontWeight='500' >CSS</Text>
-      </Box>
-    </Box>
-  </Grid>
       </Box>
 
-                    {/* access links */}
-                    <Box  m='15px 0'>
-                        <Flex justify='space-around'>
-                            <Box>
-                                <a target='_blank' href="https://github.com/chaudhari014/legit-building-8885"><Button className="project-github-link"  background='none' color='#00796B' outline="1px solid #00796B" 
-            _hover={{background:'#26A69A',color:'white'}}borderRadius='0px' mt='10px'>GitHub</Button></a>
-                            </Box>
-                            <Box>
-                            <a target='_blank' href="https://diamond-land.netlify.app/index.html"><Button className="project-deployed-link"  background='none' color='#00796B' outline="1px solid #00796B" 
-            _hover={{background:'#26A69A',color:'white'}}mt='10px' borderRadius='0'>Live Demo</Button></a>
-                                
-                            </Box>
-                        </Flex>
-                    </Box>
-                  </Box>
-                
-            </Grid>
+      {/* box 2 for secondry projects  */}
+
+      <Box ref={boxRef} m="auto" textAlign="center" display="none" mt='30px'>
+        <Grid
+          templateColumns={{
+            base: "repeat(1,1fr)",
+            sm: "repeat(1,1fr)",
+            md: "repeat(2,1fr)",
+            lg: "repeat(3,1fr)",
+          }}
+          gap=" 20px 40px"
+          
+        >
+          {/* 4th project */}
+
+          <Box
+            p="0 20px"
+            textAlign="left"
+            className="project-card"
+            boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px;"
+            _hover={{ background: mainTheme.theme.hover }}
+          >
+            <Box>
+              <Heading
+                p="15px 0"
+                size="lg"
+                color="#00796B"
+                className="project-title"
+              >
+                DIAMONDLAND
+              </Heading>
             </Box>
-    </Box>)
+            <Box pb="25px" w="80%" borderTop="1.5px solid #00796B"></Box>
+            <Box w={{ base: "105%", sm: "100%" }}>
+              <img
+                style={{ width: "100%" }}
+                src="https://raw.githubusercontent.com/chaudhari014/legit-building-8885/main/banner/Screenshot%20(672).png"
+              />
+            </Box>
+
+            <Box p="15px 0">
+              <Text fontWeight="bold" m="5px 0" color="#00796B">
+                CaratLane Clone
+              </Text>
+              <Box w="60%" borderTop="1.5px solid #00796B"></Box>
+              <Text
+                color={mainTheme.theme.dText}
+                className="project-description"
+              >
+                Diamondland is an e-commerce website specializing in jewelry,
+                offering customers a wide range of high-quality jewelry at
+                affordable prices. They also provide personalized gift options
+                for your loved ones.
+              </Text>
+            </Box>
+            {/* tech Stack */}
+            <Box m="auto" className="project-tech-stack">
+              <Heading size="sm" color="#00796B">
+                Tech Stack
+              </Heading>
+              <Box w="60%" borderTop="1.5px solid #00796B"></Box>
+              <Grid
+                p="15px 0"
+                gap="15px"
+                templateColumns={{
+                  base: "repeat(2,1fr)",
+                  sm: "repeat(3,1fr)",
+                  md: "repeat(4,1fr)",
+                }}
+                textAlign="center"
+              >
+                {/* HTML */}
+                <Box p="10px">
+                  <Flex justifyContent="center">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/1532/1532556.png"
+                      style={{ width: "70%" }}
+                    />
+                  </Flex>
+                </Box>
+                {/* JavaScript */}
+                <Box>
+                  <Flex justifyContent="center">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+                      style={{ width: "60%" }}
+                    />
+                  </Flex>
+                </Box>
+                {/* CSS */}
+                <Box>
+                  <Flex justifyContent="center">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png"
+                      style={{ width: "65%" }}
+                    />
+                  </Flex>
+                </Box>
+              </Grid>
+            </Box>
+
+            {/* access links */}
+            <Box m="15px 0">
+              <Flex justify="space-around">
+                <Box>
+                  <a
+                    target="_blank"
+                    href="https://github.com/chaudhari014/legit-building-8885"
+                  >
+                    <Button
+                      className="project-github-link"
+                      background="none"
+                      color="#00796B"
+                      outline="1px solid #00796B"
+                      _hover={{ background: "#26A69A", color: "white" }}
+                      borderRadius="0px"
+                      mt="10px"
+                    >
+                      GitHub
+                    </Button>
+                  </a>
+                </Box>
+                <Box>
+                  <a
+                    target="_blank"
+                    href="https://diamond-land.netlify.app/index.html"
+                  >
+                    <Button
+                      className="project-deployed-link"
+                      background="none"
+                      color="#00796B"
+                      outline="1px solid #00796B"
+                      _hover={{ background: "#26A69A", color: "white" }}
+                      mt="10px"
+                      borderRadius="0"
+                    >
+                      Live Demo
+                    </Button>
+                  </a>
+                </Box>
+              </Flex>
+            </Box>
+          </Box>
+          {/* 5ht project  */}
+          <Box
+            p="0 20px"
+            textAlign="left"
+            className="project-card"
+            boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px;"
+            _hover={{ background: mainTheme.theme.hover }}
+          >
+            <Box>
+              <Heading
+                p="15px 0"
+                size="lg"
+                color="#00796B"
+                className="project-title"
+              >
+                SPENDWISER
+              </Heading>
+            </Box>
+            <Box pb="25px" w="80%" borderTop="1.5px solid #00796B"></Box>
+            <Box w={{ base: "105%", sm: "100%" }}>
+              <img
+                style={{ width: "100%" }}
+                src="https://user-images.githubusercontent.com/112808279/238118882-e4441c6a-8b1e-418d-b228-7132e40a40d4.png"
+              />
+            </Box>
+
+            <Box p="15px 0">
+              <Text fontWeight="bold" m="5px 0" color="#00796B">
+                Money Manager
+              </Text>
+              <Box w="60%" borderTop="1.5px solid #00796B"></Box>
+              <Text
+                color={mainTheme.theme.dText}
+                className="project-description"
+              >
+                SpendWiser is an invaluable tool for anyone looking to manage
+                their monthly budget and keep track of their spending. With its
+                user-friendly interface and comprehensive features, SpendWiser
+                makes it easy to stay on top of your finances and ensure that
+                you are meeting your financial goals.
+              </Text>
+            </Box>
+            {/* tech Stack */}
+            <Box m="auto" className="project-tech-stack">
+              <Heading size="sm" color="#00796B">
+                Tech Stack
+              </Heading>
+              <Box w="60%" borderTop="1.5px solid #00796B"></Box>
+              <Grid
+                gap="25px"
+                templateColumns={{
+                  base: "repeat(2,1fr)",
+                  sm: "repeat(3,1fr)",
+                  md: "repeat(4,1fr)",
+                }}
+                textAlign="center"
+                p="15px 0"
+                placeItems="center"
+              >
+                {/* react */}
+                <Box>
+                  <Flex justifyContent="center">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+                      style={{ width: "75%" }}
+                    />
+                  </Flex>
+                </Box>
+                {/* chakra Ui */}
+                <Box>
+                  <Flex justifyContent="center">
+                    <img
+                      src="https://img.icons8.com/color/512/chakra-ui.png"
+                      style={{ width: "75%" }}
+                    />
+                  </Flex>
+                </Box>
+                {/* redux */}
+                <Box>
+                  <Flex justifyContent="center">
+                    <img
+                      src="https://img.uxwing.com/wp-content/themes/uxwing/download/brands-social-media/redux-icon.png"
+                      style={{ width: "80%" }}
+                    />
+                  </Flex>
+                </Box>
+                {/* chart js */}
+                <Box>
+                  <Flex justifyContent="center">
+                    <img
+                      src="https://www.richardwestenra.com/painting-with-data-talk/img/libs/recharts.png"
+                      style={{ width: "100%" }}
+                    />
+                  </Flex>
+                </Box>
+              </Grid>
+            </Box>
+
+            {/* access links */}
+            <Box m="15px 0">
+              <Flex justify="space-around">
+                <Box>
+                  <a
+                    target="_blank"
+                    href="https://github.com/SumatM/SpendWiser"
+                  >
+                    <Button
+                      className="project-github-link"
+                      background="none"
+                      color="#00796B"
+                      outline="1px solid #00796B"
+                      _hover={{ background: "#26A69A", color: "white" }}
+                      borderRadius="0px"
+                      mt="10px"
+                    >
+                      GitHub
+                    </Button>
+                  </a>
+                </Box>
+                <Box>
+                  <a
+                    target="_blank"
+                    href="https://hilarious-wood-568-fw21-0275-updated1.vercel.app/"
+                  >
+                    <Button
+                      className="project-deployed-link"
+                      background="none"
+                      color="#00796B"
+                      outline="1px solid #00796B"
+                      _hover={{ background: "#26A69A", color: "white" }}
+                      mt="10px"
+                      borderRadius="0"
+                    >
+                      Live Demo
+                    </Button>
+                  </a>
+                </Box>
+              </Flex>
+            </Box>
+          </Box>
+          {/* 6th project text to speech  */}
+          <Box
+            p="0 20px"
+            textAlign="left"
+            className="project-card"
+            boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px;"
+            _hover={{ background: mainTheme.theme.hover }}
+          >
+            <Box>
+              <Heading
+                p="15px 0"
+                size="lg"
+                color="#00796B"
+                className="project-title"
+              >
+                TEXT TO SPEECH
+              </Heading>
+            </Box>
+            <Box pb="25px" w="80%" borderTop="1.5px solid #00796B"></Box>
+            <Box w={{ base: "105%", sm: "100%" }}>
+              <img
+                style={{ width: "100%" }}
+                src="https://raw.githubusercontent.com/SumatM/Text-To-Speech/main/Screenshot%20(712).png"
+              />
+            </Box>
+
+            <Box p="15px 0">
+              <Text fontWeight="bold" m="5px 0" color="#00796B">
+                JavaScript Speech Synthesis
+              </Text>
+              <Box w="60%" borderTop="1.5px solid #00796B"></Box>
+              <Text
+                color={mainTheme.theme.dText}
+                className="project-description"
+              >
+                WebPage that converts written text into spoken words. Utilized
+                natural language processing techniques to analyze and interpret
+                the text, generating synthesized speech output.
+              </Text>
+            </Box>
+            {/* tech Stack */}
+            <Box m="auto" className="project-tech-stack">
+              <Heading size="sm" color="#00796B">
+                Tech Stack
+              </Heading>
+              <Box w="60%" borderTop="1.5px solid #00796B"></Box>
+              <Grid
+                gap="25px"
+                templateColumns={{
+                  base: "repeat(2,1fr)",
+                  sm: "repeat(3,1fr)",
+                  md: "repeat(4,1fr)",
+                }}
+                textAlign="center"
+                p="15px 0"
+                placeItems="center"
+              >
+                {/* JavaScript */}
+                <Box>
+                  <Flex justifyContent="center">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+                      style={{ width: "60%" }}
+                    />
+                  </Flex>
+                </Box>
+              </Grid>
+            </Box>
+
+            {/* access links */}
+            <Box m="15px 0">
+              <Flex justify="space-around">
+                <Box>
+                  <a
+                    target="_blank"
+                    href="https://github.com/SumatM/Text-To-Speech"
+                  >
+                    <Button
+                      className="project-github-link"
+                      background="none"
+                      color="#00796B"
+                      outline="1px solid #00796B"
+                      _hover={{ background: "#26A69A", color: "white" }}
+                      borderRadius="0px"
+                      mt="10px"
+                    >
+                      GitHub
+                    </Button>
+                  </a>
+                </Box>
+                <Box>
+                  <a
+                    target="_blank"
+                    href="https://text-to-speech-sumat.netlify.app/"
+                  >
+                    <Button
+                      className="project-deployed-link"
+                      background="none"
+                      color="#00796B"
+                      outline="1px solid #00796B"
+                      _hover={{ background: "#26A69A", color: "white" }}
+                      mt="10px"
+                      borderRadius="0"
+                    >
+                      Live Demo
+                    </Button>
+                  </a>
+                </Box>
+              </Flex>
+            </Box>
+          </Box>
+        </Grid>
+        {/* for hide box2  */}
+        <Box mt='25px'>
+        <ScrollLink to="moreProject" smooth={true} duration={500}>
+        <button>
+            <Text fontWeight="bold" color="#00796B" onClick={hideBox}>
+              Less Project
+            </Text>
+          </button>
+        </ScrollLink>
+        </Box>
+      </Box>
+    </Box>
+  );
 }
