@@ -23,7 +23,7 @@ import { animateScroll as scroll } from "react-scroll";
 import emailjs from "@emailjs/browser";
 
 export default function Footer() {
-  const theme = useContext(ThemeContext);
+  const mainTheme = useContext(ThemeContext);
 
   const initalState = {
     name: "",
@@ -43,18 +43,14 @@ export default function Footer() {
     setFrom({ ...form, [name]: value });
   }
 
-  const apiKey = process.env.REACT_APP_KEY1;
-  const baseUrl = process.env.REACT_APP_KEY2;
-
   function handleSubmit() {
     const { name, email, number, message } = form;
-    console.log(apiKey,baseUrl)
-    if(!validateNumber(number)){
-      alert("Please enter a valid 10 digit Number.");
-      return;
-    }
 
     if (name && email && number && message) {
+      if (!validateNumber(number)) {
+        alert("Please enter a valid 10 digit Number.");
+        return;
+      }
       if (validateEmail(email)) {
         emailjs
           .send(
@@ -65,13 +61,19 @@ export default function Footer() {
           )
           .then(
             function (response) {
+              alert("Thank you! You will be contacted soon.");
+              setFrom({
+                name: "",
+                email: "",
+                number: "",
+                message: "",
+              });
               console.log("SUCCESS!", response.status, response.text);
             },
             function (err) {
               console.log("FAILED...", err);
             }
           );
-        alert("Thank you! You will be contacted soon.");
       } else {
         alert("Please enter a valid email address.");
       }
@@ -91,20 +93,19 @@ export default function Footer() {
     for (let i = 0; i < numString.length; i++) {
       if (isNaN(numString[i])) {
         return false;
-      }else{
+      } else {
         count++;
       }
     }
-  
-    if(count===10){
+
+    if (count === 10) {
       return true;
     }
     return false;
   }
-  
 
   return (
-    <Box textAlign="center" p="15px" bg={theme.bg} id="contact">
+    <Box textAlign="center" p="15px" bg={mainTheme.theme.bg} id="contact">
       <Box w="80%" margin="auto" borderTop="1.5px solid #00796B"></Box>
       {/*------- footer containter=------ */}
       <Box p="40px 20px" m="auto" textAlign="center">
@@ -245,7 +246,11 @@ export default function Footer() {
             </Flex>
           </Box>
           {/*--------------- form-------------------- */}
-          <Box p={{ base: "0", sm: "25px" }} zIndex="2">
+          <Box
+            p={{ base: "0", sm: "25px" }}
+            zIndex="2"
+            color={mainTheme.theme.dText}
+          >
             <FormControl>
               <Flex mt="15px">
                 <Box w="30%">
@@ -257,6 +262,7 @@ export default function Footer() {
                   placeholder="Enter Your Name"
                   name="name"
                   onChange={handleinput}
+                  value={form.name}
                 />
               </Flex>
 
@@ -270,6 +276,7 @@ export default function Footer() {
                   placeholder="Enter Your Email"
                   name="email"
                   onChange={handleinput}
+                  value={form.email}
                 />
               </Flex>
               {/* number  */}
@@ -283,12 +290,13 @@ export default function Footer() {
                   placeholder="Enter Your Number"
                   name="number"
                   onChange={handleinput}
+                  value={form.number}
                 />
               </Flex>
               {/* message  */}
               <Flex mt="30px">
                 <Box w="30%">
-                  <FormLabel color="#00796B">Number:</FormLabel>
+                  <FormLabel color="#00796B">Message:</FormLabel>
                 </Box>
                 <Input
                   border="1px solid #00796B"
@@ -296,6 +304,7 @@ export default function Footer() {
                   placeholder="Enter Your Message"
                   name="message"
                   onChange={handleinput}
+                  value={form.message}
                 />
               </Flex>
               <Box></Box>

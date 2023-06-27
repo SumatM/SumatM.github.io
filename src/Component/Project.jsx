@@ -11,7 +11,7 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 import { ThemeContext } from "./ThemeContext";
-import { useContext, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { Link as ScrollLink } from "react-scroll";
 
 export default function Project() {
@@ -20,15 +20,13 @@ export default function Project() {
   const boxRef = useRef(null);
   const moreProRef = useRef(null);
 
-  function showBox() {
-    boxRef.current.style.display = "block";
-    moreProRef.current.style.display='none'
-  }
+  function showBox() {}
 
-  function hideBox() {
-    boxRef.current.style.display = "none";
-    moreProRef.current.style.display='block'
-  }
+  function hideBox() {}
+
+  useEffect(() => {
+    // boxRef.current.style.height = '50vh%';
+  }, []);
 
   return (
     <Box
@@ -55,6 +53,7 @@ export default function Project() {
           }}
           gap=" 20px 40px"
           mt="45px"
+          ref={boxRef}
         >
           {/* 1st project  */}
           <Box
@@ -77,10 +76,15 @@ export default function Project() {
             <Box pb="25px" w="80%" borderTop="1.5px solid #00796B"></Box>
 
             <Box w={{ base: "105%", sm: "100%" }}>
-              <img
-                style={{ width: "100%" }}
-                src="https://raw.githubusercontent.com/SumatM/Spartan/main/readmeImages/Screenshot%20(504).png"
-              />
+              <a
+                href="https://marvelous-crack-5191.vercel.app/"
+                target="_blank"
+              >
+                <img
+                  style={{ width: "100%" }}
+                  src="https://raw.githubusercontent.com/SumatM/Spartan/main/readmeImages/Screenshot%20(504).png"
+                />
+              </a>
             </Box>
             <Box p="15px 0">
               <Text fontWeight="bold" m="5px 0" color="#00796B">
@@ -214,7 +218,9 @@ export default function Project() {
             </Box>
             <Box pb="25px" w="80%" borderTop="1.5px solid #00796B"></Box>
             <Box w={{ base: "105%", sm: "100%" }}>
-              <img src="https://raw.githubusercontent.com/SumatM/Arivu/653364fa661bbda14f9070ea6f65bd6bf0412e32/frontend/public/Screenshot%20(711).png" />
+              <a href="https://puny-potato-4945.vercel.app/" target="_blank">
+                <img src="https://raw.githubusercontent.com/SumatM/Arivu/653364fa661bbda14f9070ea6f65bd6bf0412e32/frontend/public/Screenshot%20(711).png" />
+              </a>
             </Box>
             <Box p="15px 0">
               <Text
@@ -251,7 +257,7 @@ export default function Project() {
                 textAlign="center"
               >
                 {/* Node */}
-                <Box >
+                <Box>
                   <Flex justifyContent="center">
                     <img
                       src="https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png"
@@ -277,7 +283,7 @@ export default function Project() {
                     />
                   </Flex>
                 </Box>
-              {/* react  */}
+                {/* react  */}
                 <Box>
                   <Flex justifyContent="center">
                     <img
@@ -311,10 +317,7 @@ export default function Project() {
             <Box m="15px 0">
               <Flex justify="space-around">
                 <Box>
-                  <a
-                    target="_blank"
-                    href="https://github.com/SumatM/Arivu"
-                  >
+                  <a target="_blank" href="https://github.com/SumatM/Arivu">
                     <Button
                       className="project-github-link"
                       background="none"
@@ -372,7 +375,12 @@ export default function Project() {
             </Box>
             <Box pb="25px" w="80%" borderTop="1.5px solid #00796B"></Box>
             <Box w={{ base: "105%", sm: "100%" }}>
-              <img src="https://raw.githubusercontent.com/SumatM/Indian-States/main/UI%20images/Screenshot%20(596).png" />
+              <a
+                href="https://indian-states.netlify.app/index.html"
+                target="_blank"
+              >
+                <img src="https://raw.githubusercontent.com/SumatM/Indian-States/main/UI%20images/Screenshot%20(596).png" />
+              </a>
             </Box>
             <Box p="15px 0">
               <Text
@@ -480,29 +488,6 @@ export default function Project() {
               </Flex>
             </Box>
           </Box>
-        </Grid>
-        <Box id="moreProject" mt="25px" ref={moreProRef}>
-          <button>
-            <Text fontWeight="bold" color="#00796B" onClick={showBox}>
-              More Project
-            </Text>
-          </button>
-        </Box>
-      </Box>
-
-      {/* box 2 for secondry projects  */}
-
-      <Box ref={boxRef} m="auto" textAlign="center" display="none" mt='30px'>
-        <Grid
-          templateColumns={{
-            base: "repeat(1,1fr)",
-            sm: "repeat(1,1fr)",
-            md: "repeat(2,1fr)",
-            lg: "repeat(3,1fr)",
-          }}
-          gap=" 20px 40px"
-          
-        >
           {/* 4th project */}
 
           <Box
@@ -524,10 +509,15 @@ export default function Project() {
             </Box>
             <Box pb="25px" w="80%" borderTop="1.5px solid #00796B"></Box>
             <Box w={{ base: "105%", sm: "100%" }}>
-              <img
-                style={{ width: "100%" }}
-                src="https://raw.githubusercontent.com/chaudhari014/legit-building-8885/main/banner/Screenshot%20(672).png"
-              />
+              <a
+                href="https://diamond-land.netlify.app/index.html"
+                target="_blank"
+              >
+                <img
+                  style={{ width: "100%" }}
+                  src="https://raw.githubusercontent.com/chaudhari014/legit-building-8885/main/banner/Screenshot%20(672).png"
+                />
+              </a>
             </Box>
 
             <Box p="15px 0">
@@ -653,10 +643,15 @@ export default function Project() {
             </Box>
             <Box pb="25px" w="80%" borderTop="1.5px solid #00796B"></Box>
             <Box w={{ base: "105%", sm: "100%" }}>
-              <img
-                style={{ width: "100%" }}
-                src="https://user-images.githubusercontent.com/112808279/238118882-e4441c6a-8b1e-418d-b228-7132e40a40d4.png"
-              />
+              <a
+                href="https://hilarious-wood-568-fw21-0275-updated1.vercel.app/"
+                target="_blank"
+              >
+                <img
+                  style={{ width: "100%" }}
+                  src="https://user-images.githubusercontent.com/112808279/238118882-e4441c6a-8b1e-418d-b228-7132e40a40d4.png"
+                />
+              </a>
             </Box>
 
             <Box p="15px 0">
@@ -793,10 +788,15 @@ export default function Project() {
             </Box>
             <Box pb="25px" w="80%" borderTop="1.5px solid #00796B"></Box>
             <Box w={{ base: "105%", sm: "100%" }}>
-              <img
-                style={{ width: "100%" }}
-                src="https://raw.githubusercontent.com/SumatM/Text-To-Speech/main/Screenshot%20(712).png"
-              />
+              <a
+                href="https://text-to-speech-sumat.netlify.app/"
+                target="_blank"
+              >
+                <img
+                  style={{ width: "100%" }}
+                  src="https://raw.githubusercontent.com/SumatM/Text-To-Speech/main/Screenshot%20(712).png"
+                />
+              </a>
             </Box>
 
             <Box p="15px 0">
@@ -885,16 +885,6 @@ export default function Project() {
             </Box>
           </Box>
         </Grid>
-        {/* for hide box2  */}
-        <Box mt='25px'>
-        <ScrollLink to="moreProject" smooth={true} duration={500}>
-        <button>
-            <Text fontWeight="bold" color="#00796B" onClick={hideBox}>
-              Less Project
-            </Text>
-          </button>
-        </ScrollLink>
-        </Box>
       </Box>
     </Box>
   );
