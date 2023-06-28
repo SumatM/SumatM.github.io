@@ -111,9 +111,10 @@ export default function Project() {
                 p="15px 0"
                 gap="15px"
                 templateColumns={{
-                  base: "repeat(2,1fr)",
-                  sm: "repeat(3,1fr)",
+                  base: "repeat(4,1fr)",
+                  sm: "repeat(4,1fr)",
                   md: "repeat(4,1fr)",
+                  lg:"repeat(5,1fr)"
                 }}
                 textAlign="center"
               >
@@ -250,9 +251,10 @@ export default function Project() {
                 p="15px 0"
                 gap="15px"
                 templateColumns={{
-                  base: "repeat(2,1fr)",
-                  sm: "repeat(3,1fr)",
+                  base: "repeat(4,1fr)",
+                  sm: "repeat(4,1fr)",
                   md: "repeat(4,1fr)",
+                  lg:"repeat(5,1fr)"
                 }}
                 textAlign="center"
               >
@@ -288,6 +290,15 @@ export default function Project() {
                   <Flex justifyContent="center">
                     <img
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+                      style={{ width: "75%" }}
+                    />
+                  </Flex>
+                </Box>
+                {/* redux  */}
+                <Box>
+                  <Flex justifyContent="center">
+                    <img
+                      src="https://img.uxwing.com/wp-content/themes/uxwing/download/brands-social-media/redux-icon.png"
                       style={{ width: "75%" }}
                     />
                   </Flex>
@@ -410,9 +421,10 @@ export default function Project() {
                 p="15px 0"
                 gap="15px"
                 templateColumns={{
-                  base: "repeat(2,1fr)",
-                  sm: "repeat(3,1fr)",
+                  base: "repeat(4,1fr)",
+                  sm: "repeat(4,1fr)",
                   md: "repeat(4,1fr)",
+                  lg:"repeat(5,1fr)"
                 }}
                 textAlign="center"
               >
@@ -545,9 +557,10 @@ export default function Project() {
                 p="15px 0"
                 gap="15px"
                 templateColumns={{
-                  base: "repeat(2,1fr)",
-                  sm: "repeat(3,1fr)",
+                  base: "repeat(4,1fr)",
+                  sm: "repeat(4,1fr)",
                   md: "repeat(4,1fr)",
+                  lg:"repeat(5,1fr)"
                 }}
                 textAlign="center"
               >
@@ -679,9 +692,10 @@ export default function Project() {
               <Grid
                 gap="25px"
                 templateColumns={{
-                  base: "repeat(2,1fr)",
-                  sm: "repeat(3,1fr)",
+                  base: "repeat(4,1fr)",
+                  sm: "repeat(4,1fr)",
                   md: "repeat(4,1fr)",
+                  lg:"repeat(5,1fr)"
                 }}
                 textAlign="center"
                 p="15px 0"
@@ -822,9 +836,10 @@ export default function Project() {
               <Grid
                 gap="25px"
                 templateColumns={{
-                  base: "repeat(2,1fr)",
-                  sm: "repeat(3,1fr)",
+                  base: "repeat(4,1fr)",
+                  sm: "repeat(4,1fr)",
                   md: "repeat(4,1fr)",
+                  lg:"repeat(5,1fr)"
                 }}
                 textAlign="center"
                 p="15px 0"
