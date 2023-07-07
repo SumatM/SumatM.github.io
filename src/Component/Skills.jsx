@@ -40,7 +40,7 @@ export default function Skills() {
             }}
             className="skills-card"
           >
-            <Flex justifyContent="center" >
+            <Flex justifyContent="center">
               <img
                 className="skills-card-img"
                 style={{ width: "40%" }}
@@ -106,30 +106,6 @@ export default function Skills() {
               </Heading>
             </Box>
           </motion.div>
-          {/* Chakra UI */}
-          <motion.div
-            drag
-            style={{ background: "transparent" }}
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.3)",
-              background: mainTheme.theme.hover,
-            }}
-            className="skills-card"
-          >
-            <Flex justifyContent="center">
-              <img
-                className="skills-card-img"
-                style={{ width: "40%" }}
-                src="https://img.icons8.com/color/512/chakra-ui.png"
-              />
-            </Flex>
-            <Box alignContent="center" p="15px">
-              <Heading size="md" color="#563D67" className="skills-card-name">
-                Chakra UI
-              </Heading>
-            </Box>
-          </motion.div>
           {/* Redux */}
           <motion.div
             drag
@@ -154,7 +130,7 @@ export default function Skills() {
               </Heading>
             </Box>
           </motion.div>
-          {/* Git */}
+          {/* Chakra UI */}
           <motion.div
             drag
             style={{ background: "transparent" }}
@@ -169,12 +145,12 @@ export default function Skills() {
               <img
                 className="skills-card-img"
                 style={{ width: "40%" }}
-                src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+                src="https://img.icons8.com/color/512/chakra-ui.png"
               />
             </Flex>
             <Box alignContent="center" p="15px">
               <Heading size="md" color="#563D67" className="skills-card-name">
-                Git
+                Chakra UI
               </Heading>
             </Box>
           </motion.div>
@@ -199,6 +175,35 @@ export default function Skills() {
             <Box alignContent="center" p="15px">
               <Heading size="md" color="#563D67" className="skills-card-name">
                 React
+              </Heading>
+            </Box>
+          </motion.div>
+          {/* next.js  */}
+          <motion.div
+            drag
+            style={{ background: "transparent" }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.3)",
+              background: mainTheme.theme.hover,
+            }}
+            className="skills-card"
+          >
+            <Flex justifyContent="center">
+              <img
+                className="skills-card-img"
+                style={{ width: "40%" }}
+                src="https://www.svgrepo.com/show/354113/nextjs-icon.svg"
+              />
+            </Flex>
+            <Box alignContent="center" p="15px">
+              <Heading
+                size="md"
+                color="#563D67"
+                letterSpacing="1.2px"
+                className="skills-card-name"
+              >
+                Next.js
               </Heading>
             </Box>
           </motion.div>
@@ -302,7 +307,7 @@ export default function Skills() {
             <Flex justifyContent="center">
               <img
                 className="skills-card-img"
-                style={{ width: "40%" }}
+                style={{ width: "50%" }}
                 src="https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png"
               />
             </Flex>
@@ -343,6 +348,30 @@ export default function Skills() {
                 className="skills-card-name"
               >
                 Tailwind CSS
+              </Heading>
+            </Box>
+          </motion.div>
+          {/* Git */}
+          <motion.div
+            drag
+            style={{ background: "transparent" }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.3)",
+              background: mainTheme.theme.hover,
+            }}
+            className="skills-card"
+          >
+            <Flex justifyContent="center">
+              <img
+                className="skills-card-img"
+                style={{ width: "40%" }}
+                src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+              />
+            </Flex>
+            <Box alignContent="center" p="15px">
+              <Heading size="md" color="#563D67" className="skills-card-name">
+                Git
               </Heading>
             </Box>
           </motion.div>

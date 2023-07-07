@@ -13,7 +13,6 @@ import {
   Link,
 } from "@chakra-ui/react";
 import { useRef } from "react";
-import logo from "./sumat-low-resolution-logo-color-on-transparent-background.png";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import resume from "./../Banner//Sumat-Mallick-Resume.pdf";
 import { Link as ScrollLink } from "react-scroll";
@@ -164,7 +163,7 @@ export const NavBar = () => {
                   className="nav-link contact"
                   onClick={() =>
                     window.open(
-                      "https://drive.google.com/file/d/1y_buPcHDKpyd4wZsuiGcdFLvlYBfl7Oq/view"
+                      "https://drive.google.com/file/d/1ni4YYEIFx2EWl7TNt-B8ymbVc5wmK7qt/view?usp=drive_link"
                     )
                   }
                 >
@@ -294,10 +293,9 @@ export const NavBar = () => {
               fontWeight="bolder"
               color="white"
             >
-              <Link
+              <a
                 href={resume}
                 download="Sumat-Mallick-Resume"
-                id="resume-link-1"
               >
                 <Button
                   background="none"
@@ -309,13 +307,13 @@ export const NavBar = () => {
                   id="resume-button-1"
                   onClick={() =>
                     window.open(
-                      "https://drive.google.com/file/d/1y_buPcHDKpyd4wZsuiGcdFLvlYBfl7Oq/view"
+                      "https://drive.google.com/file/d/1ni4YYEIFx2EWl7TNt-B8ymbVc5wmK7qt/view?usp=drive_link"
                     )
                   }
                 >
                   Resume
                 </Button>
-              </Link>
+              </a>
             </Box>
           </DrawerBody>
         </DrawerContent>
