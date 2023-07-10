@@ -31,7 +31,7 @@ export default function Skills() {
         >
           {/* HTML5 */}
           <motion.div
-            drag
+            
             style={{ background: "transparent" }}
             whileHover={{
               scale: 1.05,
@@ -55,7 +55,7 @@ export default function Skills() {
           </motion.div>
           {/* CSS */}
           <motion.div
-            drag
+            
             style={{ background: "transparent" }}
             whileHover={{
               scale: 1.05,
@@ -79,7 +79,7 @@ export default function Skills() {
           </motion.div>
           {/* JavaScript */}
           <motion.div
-            drag
+            
             style={{ background: "transparent" }}
             whileHover={{
               scale: 1.05,
@@ -108,7 +108,7 @@ export default function Skills() {
           </motion.div>
           {/* Redux */}
           <motion.div
-            drag
+            
             style={{ background: "transparent" }}
             whileHover={{
               scale: 1.05,
@@ -121,7 +121,7 @@ export default function Skills() {
               <img
                 className="skills-card-img"
                 style={{ width: "40%" }}
-                src="https://img.uxwing.com/wp-content/themes/uxwing/download/brands-social-media/redux-icon.png"
+                src="https://cdn.iconscout.com/icon/free/png-256/free-redux-283024.png"
               />
             </Flex>
             <Box alignContent="center" p="15px">
@@ -132,7 +132,7 @@ export default function Skills() {
           </motion.div>
           {/* Chakra UI */}
           <motion.div
-            drag
+            
             style={{ background: "transparent" }}
             whileHover={{
               scale: 1.05,
@@ -156,7 +156,7 @@ export default function Skills() {
           </motion.div>
           {/* React */}
           <motion.div
-            drag
+            
             style={{ background: "transparent" }}
             whileHover={{
               scale: 1.05,
@@ -180,7 +180,7 @@ export default function Skills() {
           </motion.div>
           {/* next.js  */}
           <motion.div
-            drag
+            
             style={{ background: "transparent" }}
             whileHover={{
               scale: 1.05,
@@ -209,7 +209,7 @@ export default function Skills() {
           </motion.div>
           {/* TypeScript */}
           <motion.div
-            drag
+            
             style={{ background: "transparent" }}
             whileHover={{
               scale: 1.05,
@@ -238,7 +238,7 @@ export default function Skills() {
           </motion.div>
           {/* Express */}
           <motion.div
-            drag
+            
             style={{ background: "transparent" }}
             whileHover={{
               scale: 1.05,
@@ -295,7 +295,7 @@ export default function Skills() {
           </motion.div>
           {/* Node.js */}
           <motion.div
-            drag
+            
             style={{ background: "transparent" }}
             whileHover={{
               scale: 1.05,
@@ -324,7 +324,7 @@ export default function Skills() {
           </motion.div>
           {/* tailwind css  */}
           <motion.div
-            drag
+            
             style={{ background: "transparent" }}
             whileHover={{
               scale: 1.05,
@@ -353,7 +353,7 @@ export default function Skills() {
           </motion.div>
           {/* Git */}
           <motion.div
-            drag
+            
             style={{ background: "transparent" }}
             whileHover={{
               scale: 1.05,
