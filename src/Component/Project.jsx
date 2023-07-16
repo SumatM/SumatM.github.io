@@ -723,7 +723,7 @@ export default function Project() {
                 <Box>
                   <Flex justifyContent="center">
                     <img
-                      src="https://img.uxwing.com/wp-content/themes/uxwing/download/brands-social-media/redux-icon.png"
+                      src="https://cdn.iconscout.com/icon/free/png-256/free-redux-283024.png"
                       style={{ width: "80%" }}
                     />
                   </Flex>
