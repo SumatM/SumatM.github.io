@@ -67,4 +67,9 @@ I am a passionate full-stack web developer with expertise in React and Next.js. 
 - LinkedIn: [My LinkedIn Profile](https://www.linkedin.com/in/sumat-mallick-65b966227/)
 - GitHub: [My GitHub Profile](https://github.com/sumatm)
 
+
+## Star and Fork
+
+If you find this project helpful or interesting, consider giving it a star ⭐ on GitHub. You can also fork it to use it as a starting point for your own portfolio website. Happy coding!
+
 Feel free to reach out if you have any questions or if you want any specific features in the portfolio!
