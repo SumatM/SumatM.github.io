@@ -1,6 +1,6 @@
 # Portfolio Website
 
-![Project Preview](https://media.licdn.com/dms/image/D562DAQHz4L2jW69fWg/profile-treasury-image-shrink_800_800/0/1686383168149?e=1690729200&v=beta&t=KTl5a3noMJArinJEpdQlOlldrqgfcM1zEEWTLRLCLIs)
+![Project Preview](https://raw.githubusercontent.com/SumatM/SumatM.github.io/275acda159c3989a95f3ca3feae780bd60e9f5c5/public/1686383168149.jpg)
 
 ## Description
 
