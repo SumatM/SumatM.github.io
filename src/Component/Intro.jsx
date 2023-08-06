@@ -145,7 +145,7 @@ export default function Intro() {
 
             <motion.div variants={item}>
               <Box mt="15px">
-                <img src="https://readme-typing-svg.demolab.com?weight=400&size=25&pause=1000&color=26A69A&background=FFFFFF00&center=true&vCenter=true&width=435&lines=A+Full+Stack+Web+Developer;A+Problem+Solver" alt="Typing SVG" />
+                <img src="https://readme-typing-svg.demolab.com?font=Ubuntu&weight=400&size=25&pause=1000&color=26A69A&background=FFFFFF00&center=true&vCenter=true&width=435&lines=A+Full+Stack+Web+Developer;A+Problem+Solver;A+Frontend+Developer;A+Backend+Developer;A+MERN+Developer;A+Music+Lover" alt="Typing SVG" />
               </Box>
             </motion.div>
           </Flex>

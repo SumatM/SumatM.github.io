@@ -61,7 +61,7 @@ export default function Footer() {
           )
           .then(
             function (response) {
-              alert("Thank you! You will be contacted soon.");
+              alert("Thank you for showing interest in my profile. I'll contact you soon.");
               setFrom({
                 name: "",
                 email: "",

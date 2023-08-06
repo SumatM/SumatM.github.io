@@ -95,3 +95,11 @@ export const typescript = {
   wid: "65%",
   swid: "40%",
 };
+
+
+export const python = {
+  title:"Python",
+  img:"https://img.freepik.com/free-icon/snakes_318-368381.jpg",
+  wid: "70%",
+  swid: "40%",
+}

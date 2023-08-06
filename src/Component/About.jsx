@@ -55,8 +55,8 @@ export default function About() {
             letterSpacing="1px"
             color={theme.theme.dText}
           >
-            An aspiring Full Stack Web Developer with a passion for MERN Stack
-            development and proficiency in HTML, CSS, JavaScript, React, Redux,
+            An Aspiring Full Stack Web Developer with a passion for MERN Stack
+            development and proficiency in HTML, CSS, JavaScript, React, Redux.js, Node.js, Next.js , MongoDB , Express.js
             and ChakraUI is seeking opportunities to work in organizations that
             can challenge their abilities as a web developer. They are eager to
             undertake challenging projects and deliver exceptional results

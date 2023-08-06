@@ -12,6 +12,7 @@ import {
   mongodb,
   nextjs,
   node,
+  python,
   react,
   redux,
   tailwind,
@@ -35,6 +36,7 @@ export default function Skills() {
     chakra,
     tailwind,
     git,
+    python
   ];
 
   return (

@@ -92,5 +92,14 @@ export const ProjectList = [
     liveLink:"https://web-resume-six.vercel.app/resume",
     gitLink:"https://github.com/SumatM/web_resume"
   },
+  {
+    heading:"Aroma",
+    img:"https://raw.githubusercontent.com/SumatM/Zomato_clone/2602b3d75a1d9c67084add7af6229c9a152ec9a1/frontend/public/Screenshot_20230807_005739.png",
+    title:"Zomato Clone",
+    description:"Working... ",
+    techStack :[nextjs,tailwind,redux,node,mongodb,express],
+    liveLink:"https://aroma-zomato.vercel.app/",
+    gitLink:"https://github.com/SumatM/Zomato_clone"
+  },
   
 ];
