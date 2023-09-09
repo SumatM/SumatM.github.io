@@ -79,7 +79,7 @@ export const nextjs = {
   title: "Next.js",
   img: "https://www.svgrepo.com/show/354113/nextjs-icon.svg",
   wid: "65%",
-  swid: "40%",
+  swid: "36%",
 };
 
 export const git = {
@@ -102,4 +102,12 @@ export const python = {
   img:"https://img.freepik.com/free-icon/snakes_318-368381.jpg",
   wid: "70%",
   swid: "40%",
+}
+
+
+export const promptEngineering = {
+  title:'Prompt Engineering',
+  img:'https://static.vecteezy.com/system/resources/previews/021/495/996/original/chatgpt-openai-logo-icon-free-png.png',
+  wid: "70%",
+  swid: "35%",
 }

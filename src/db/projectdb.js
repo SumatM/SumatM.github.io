@@ -8,9 +8,11 @@ import {
   mongodb,
   nextjs,
   node,
+  promptEngineering,
   react,
   redux,
   tailwind,
+  typescript,
 } from "./techstack";
 
 export const ProjectList = [
@@ -45,36 +47,6 @@ export const ProjectList = [
     gitLink: "https://github.com/SumatM/Indian-States",
   },
   {
-    heading: "DIAMONDLAND",
-    img: "https://raw.githubusercontent.com/chaudhari014/legit-building-8885/main/banner/Screenshot%20(672).png",
-    title: " CaratLane Clone",
-    description:
-      "Diamondland is an e-commerce website specializing in jewelry, offering customers a wide range of high-quality jewelry at affordable prices. They also provide personalized gift options for your loved ones.",
-    techStack: [html, javascript, css],
-    liveLink: "https://diamond-land.netlify.app/index.html",
-    gitLink: "https://github.com/chaudhari014/legit-building-8885",
-  },
-  {
-    heading: "SPENDWISER",
-    img: "https://user-images.githubusercontent.com/112808279/238118882-e4441c6a-8b1e-418d-b228-7132e40a40d4.png",
-    title: "Money Manager App",
-    description:
-      " SpendWiser is an invaluable tool for anyone looking to manage their monthly budget and keep track of their spending. With its user-friendly interface and comprehensive features, SpendWiser makes it easy to stay on top of your finances and ensure that you are meeting your financial goals.",
-    techStack: [react, chakra, redux, chartjs],
-    liveLink: "https://hilarious-wood-568-fw21-0275-updated1.vercel.app/",
-    gitLink: "https://github.com/SumatM/SpendWiser",
-  },
-  {
-    heading: " TEXT TO SPEECH",
-    img: "https://raw.githubusercontent.com/SumatM/Text-To-Speech/main/Screenshot%20(712).png",
-    title: " JavaScript Speech Synthesis",
-    description:
-      "WebPage that converts written text into spoken words. Utilized natural language processing techniques to analyze and interpret the text, generating synthesized speech output.",
-    techStack: [html, javascript, css],
-    liveLink: "https://text-to-speech-sumat.netlify.app/",
-    gitLink: "https://github.com/SumatM/Text-To-Speech",
-  },
-  {
     heading: "TODO APP",
     title: "",
     img: "https://raw.githubusercontent.com/SumatM/react_reudx_todo_app/main/public/Screenshot%20(750).png",
@@ -93,13 +65,69 @@ export const ProjectList = [
     gitLink:"https://github.com/SumatM/web_resume"
   },
   {
+    heading: " TEXT TO SPEECH",
+    img: "https://raw.githubusercontent.com/SumatM/Text-To-Speech/main/Screenshot%20(712).png",
+    title: " JavaScript Speech Synthesis",
+    description:
+      "WebPage that converts written text into spoken words. Utilized natural language processing techniques to analyze and interpret the text, generating synthesized speech output.",
+    techStack: [html, javascript, css],
+    liveLink: "https://text-to-speech-sumat.netlify.app/",
+    gitLink: "https://github.com/SumatM/Text-To-Speech",
+  },
+  {
+    heading: "Code-Ninja",
+    img: "https://raw.githubusercontent.com/SumatM/Code-Ninja/43e9d8f70d5e16bede959a47347ffe46c7a0d263/frontend/src/assets/Screenshot%20(758).png",
+    title: "Code Converter, Code Debugger",
+    description:
+      "Experience the future of coding with Code Ninja. Our advanced tool, powered by OpenAI API, offers code conversion, quality checks, and debugging. Elevate your coding skills, write error-free code, and boost productivity with Code Ninja.",
+    techStack: [react,typescript, chakra, promptEngineering,node],
+    liveLink: "https://code-converter-brown.vercel.app/",
+    gitLink: "https://github.com/SumatM/Code-Ninja",
+  },
+  {
+    heading: "E.M.S",
+    img: "https://raw.githubusercontent.com/SumatM/typeScript-learning/e1f49f5f02d1400869046f783090a7f8762b7c47/mock_demo/frontend/src/assets/Screenshot%20(759).png",
+    title: "Employee Management System",
+    description:
+    "Employee Management System with authentication, authorization, sorting, filtering, pagination, and search capabilities. Seamlessly manage employees, tracking their data efficiently and ensuring secure access. Simplify HR tasks with this comprehensive solution.",
+    techStack: [react,typescript, chakra, redux, node , express, mongodb],
+    liveLink: "https://ems-aj5i3eq30-sumatm.vercel.app/",
+    gitLink: "https://github.com/SumatM/typeScript-learning/tree/main/mock_demo",
+  },
+  {
     heading:"Aroma",
     img:"https://raw.githubusercontent.com/SumatM/Zomato_clone/2602b3d75a1d9c67084add7af6229c9a152ec9a1/frontend/public/Screenshot_20230807_005739.png",
     title:"Zomato Clone",
     description:"Working... ",
-    techStack :[nextjs,tailwind,redux,node,mongodb,express],
+    techStack :[react,tailwind,redux,node,mongodb,express],
     liveLink:"https://aroma-zomato.vercel.app/",
     gitLink:"https://github.com/SumatM/Zomato_clone"
   },
   
 ];
+
+
+const extra = [
+  {
+    heading: "DIAMONDLAND",
+    img: "https://raw.githubusercontent.com/chaudhari014/legit-building-8885/main/banner/Screenshot%20(672).png",
+    title: " CaratLane Clone",
+    description:
+      "Diamondland is an e-commerce website specializing in jewelry, offering customers a wide range of high-quality jewelry at affordable prices. They also provide personalized gift options for your loved ones.",
+    techStack: [html, javascript, css],
+    liveLink: "https://diamond-land.netlify.app/index.html",
+    gitLink: "https://github.com/chaudhari014/legit-building-8885",
+  },
+  ,
+  {
+    heading: "SPENDWISER",
+    img: "https://user-images.githubusercontent.com/112808279/238118882-e4441c6a-8b1e-418d-b228-7132e40a40d4.png",
+    title: "Money Manager App",
+    description:
+      " SpendWiser is an invaluable tool for anyone looking to manage their monthly budget and keep track of their spending. With its user-friendly interface and comprehensive features, SpendWiser makes it easy to stay on top of your finances and ensure that you are meeting your financial goals.",
+    techStack: [react, chakra, redux, chartjs],
+    liveLink: "https://hilarious-wood-568-fw21-0275-updated1.vercel.app/",
+    gitLink: "https://github.com/SumatM/SpendWiser",
+  }
+
+]

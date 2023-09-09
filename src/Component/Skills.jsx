@@ -12,6 +12,7 @@ import {
   mongodb,
   nextjs,
   node,
+  promptEngineering,
   python,
   react,
   redux,
@@ -36,7 +37,8 @@ export default function Skills() {
     chakra,
     tailwind,
     git,
-    python
+    python,
+    promptEngineering
   ];
 
   return (
