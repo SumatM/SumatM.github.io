@@ -23,6 +23,8 @@ import {
 export default function Skills() {
   const mainTheme = useContext(ThemeContext);
 
+  console.log(mainTheme)
+
   const skills = [
     html,
     css,
@@ -38,7 +40,7 @@ export default function Skills() {
     tailwind,
     git,
     python,
-    promptEngineering
+    promptEngineering,
   ];
 
   return (
@@ -76,11 +78,11 @@ export default function Skills() {
                 className="skills-card"
               >
                 <Flex justifyContent="center">
-                  <img
+                  { (skill.title == 'Express' || skill.title == "Next.js") && (mainTheme?.theme.bg=='black' || mainTheme?.theme.bg=="#08105B") ? skill?.svg({size:'4rem',color:'#757575'}) : <img
                     className="skills-card-img"
-                    style={{ width: skill.swid }}
+                    style={{ width: skill.swid,fill:'red' }}
                     src={skill.img}
-                  />
+                  />  }
                 </Flex>
                 <Box alignContent="center" p="15px">
                   <Heading

@@ -1,3 +1,6 @@
+import {SiExpress} from 'react-icons/si'
+import {TbBrandNextjs} from 'react-icons/tb'
+
 export const html = {
   title: "HTML",
   img: "https://cdn-icons-png.flaticon.com/512/1532/1532556.png",
@@ -64,6 +67,7 @@ export const mongodb = {
 export const express = {
   title: "Express",
   img: "https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png",
+  svg:SiExpress,
   wid: "60%",
   swid: "40%",
 };
@@ -79,6 +83,7 @@ export const nextjs = {
   title: "Next.js",
   img: "https://www.svgrepo.com/show/354113/nextjs-icon.svg",
   wid: "65%",
+  svg:TbBrandNextjs,
   swid: "36%",
 };
 

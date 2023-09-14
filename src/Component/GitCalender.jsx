@@ -17,15 +17,15 @@ export default function GitCalender(){
             </Flex>
             <Flex  mt='40px' flexDirection={{base:'column',sm:'column',md:'column',lg:'row'}} justifyContent='space-around' alignItems='center' gap='25px'>
                 <Box >
-                    <img display="block" id="github-stats-card" src='https://github-readme-stats.vercel.app/api?username=SumatM'/>
+                    <img display="block" id="github-stats-card" src='https://github-readme-stats.vercel.app/api?username=SumatM' alt="Github Staus Card"/>
                 </Box>
                 <Box >
-            <img style={{display:'block'}} id="github-streak-stats"  src="https://github-readme-streak-stats.herokuapp.com?user=SumatM"/>
+            <img style={{display:'block'}} id="github-streak-stats"  src="https://github-readme-streak-stats.herokuapp.com?user=SumatM" alt="Github streak stats"/>
             </Box>
             </Flex>
             
             <Flex  mt='40px'  justifyContent='center'>
-              <img display="block" id="github-top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SumatM"/>
+              <img display="block" id="github-top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SumatM" alt="Github Top Language"/>
                 </Flex>
             </Box>
         </Box>

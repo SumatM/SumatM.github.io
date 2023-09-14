@@ -67,7 +67,7 @@ export default function Project() {
 
                 <Box w={{ base: "105%", sm: "100%" }}>
                   <Link to={project.liveLink} target="_blank">
-                    <img style={{ width: "100%" }} src={project.img} />
+                    <img style={{ width: "100%" }} src={project.img} alt={project.heading}/>
                   </Link>
                 </Box>
                 <Box p="15px 0">
@@ -103,7 +103,8 @@ export default function Project() {
                       return (
                         <Box>
                           <Flex justifyContent="center">
-                            <img src={tech.img} style={{ width: tech.wid }} />
+                          { (tech?.title == 'Express' || tech?.title == "Next.js") && (mainTheme?.theme.bg=='black' || mainTheme?.theme.bg=="#08105B") ? tech?.svg({size:'2.5rem',color:"#757575"}) :
+                            <img src={tech.img} style={{ width: tech.wid,fill:'red' }} alt={tech.title}/>}
                           </Flex>
                         </Box>
                       );
