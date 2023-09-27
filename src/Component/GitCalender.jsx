@@ -25,7 +25,7 @@ export default function GitCalender(){
             </Flex>
             
             <Flex  mt='40px'  justifyContent='center'>
-              <img display="block" id="github-top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SumatM" alt="Github Top Language"/>
+              <img display="block" id="github-top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sumatm&layout=compact"/>
                 </Flex>
             </Box>
         </Box>

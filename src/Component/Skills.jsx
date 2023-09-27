@@ -23,7 +23,7 @@ import {
 export default function Skills() {
   const mainTheme = useContext(ThemeContext);
 
-  console.log(mainTheme)
+  // console.log(mainTheme)
 
   const skills = [
     html,
