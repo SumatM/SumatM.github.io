@@ -55,11 +55,10 @@ export default function About() {
             letterSpacing="1px"
             color={theme.theme.dText}
           >
-            An Aspiring Full Stack Web Developer with a passion for MERN Stack
-            development and proficiency in HTML, CSS, JavaScript, React, Redux.js, Node.js, Next.js , MongoDB , Express.js
-            and ChakraUI is seeking opportunities to work in organizations that
+            A Full Stack Web Developer with a passion for MERN Stack
+            development and proficiency in HTML, CSS, JavaScript, React, Redux.js, Node.js, Next.js , MongoDB , Express.js, ChakraUI and Generative AI is seeking opportunities to work in organizations that
             can challenge their abilities as a web developer. They are eager to
-            undertake challenging projects and deliver exceptional results
+            undertake challenging projects and deliver exceptional results.
           </Text>
         </Box>
         <Box p="5px 15px" fontWeight="bolder" color="white">

@@ -50,6 +50,7 @@ export const ProjectList = [
     heading: "TODO APP",
     title: "",
     img: "https://raw.githubusercontent.com/SumatM/react_reudx_todo_app/main/public/Screenshot%20(750).png",
+    title: "Advance Todo Web App",
     description:
       "Todo App is a simple todo application that allows you to track your tasks and monitor the time taken to complete them.",
     techStack: [javascript, react, redux, chakra],
@@ -57,22 +58,24 @@ export const ProjectList = [
     gitLink: "https://github.com/SumatM/react_reudx_todo_app",
   },
   {
-    heading:"WEB RESUME",
-    img:"https://raw.githubusercontent.com/SumatM/web_resume/main/public/Screenshot%20(747).png",
-    description:"Web Resume a professionally designed interactive platform that presents my skills and illustrious professional journey. With multi-theme support and captivating animations, it offers a compelling showcase of my expertise.",
-    techStack :[nextjs,tailwind,redux],
-    liveLink:"https://web-resume-six.vercel.app/resume",
-    gitLink:"https://github.com/SumatM/web_resume"
+    heading: "WEB RESUME",
+    img: "https://raw.githubusercontent.com/SumatM/web_resume/main/public/Screenshot%20(747).png",
+    title: "Non PDF Resume",
+    description:
+      "Web Resume a professionally designed interactive platform that presents my skills and illustrious professional journey. With multi-theme support and captivating animations, it offers a compelling showcase of my expertise.",
+    techStack: [nextjs, tailwind, redux],
+    liveLink: "https://web-resume-six.vercel.app/resume",
+    gitLink: "https://github.com/SumatM/web_resume",
   },
   {
-    heading: " TEXT TO SPEECH",
-    img: "https://raw.githubusercontent.com/SumatM/Text-To-Speech/main/Screenshot%20(712).png",
-    title: " JavaScript Speech Synthesis",
+    heading: "JOKE GENERATOR",
+    img: "https://raw.githubusercontent.com/SumatM/joke_genrator/main/frontend/public/Screenshot%20(787).png",
+    title: "Genrative AI Joke Generator App",
     description:
-      "WebPage that converts written text into spoken words. Utilized natural language processing techniques to analyze and interpret the text, generating synthesized speech output.",
-    techStack: [html, javascript, css],
-    liveLink: "https://text-to-speech-sumat.netlify.app/",
-    gitLink: "https://github.com/SumatM/Text-To-Speech",
+      "Created a fun Joke Generator app using OpenAI API, delivering a delightful experience with witty and entertaining jokes. Let the app bring laughter to your day with clever humor!",
+    techStack: [react,typescript,node,promptEngineering,express],
+    liveLink: "https://joke-indol.vercel.app/",
+    gitLink: "https://github.com/SumatM/joke_genrator",
   },
   {
     heading: "Code-Ninja",
@@ -80,7 +83,7 @@ export const ProjectList = [
     title: "Code Converter, Code Debugger",
     description:
       "Experience the future of coding with Code Ninja. Our advanced tool, powered by OpenAI API, offers code conversion, quality checks, and debugging. Elevate your coding skills, write error-free code, and boost productivity with Code Ninja.",
-    techStack: [react,typescript, chakra, promptEngineering,node],
+    techStack: [react, typescript, chakra, promptEngineering, node],
     liveLink: "https://code-converter-brown.vercel.app/",
     gitLink: "https://github.com/SumatM/Code-Ninja",
   },
@@ -89,23 +92,22 @@ export const ProjectList = [
     img: "https://raw.githubusercontent.com/SumatM/typeScript-learning/e1f49f5f02d1400869046f783090a7f8762b7c47/mock_demo/frontend/src/assets/Screenshot%20(759).png",
     title: "Employee Management System",
     description:
-    "Employee Management System with authentication, authorization, sorting, filtering, pagination, and search capabilities. Seamlessly manage employees, tracking their data efficiently and ensuring secure access. Simplify HR tasks with this comprehensive solution.",
-    techStack: [react,typescript, chakra, redux, node , express, mongodb],
-    liveLink: "https://ems-aj5i3eq30-sumatm.vercel.app/",
-    gitLink: "https://github.com/SumatM/typeScript-learning/tree/main/mock_demo",
+      "Employee Management System with authentication, authorization, sorting, filtering, pagination, and search capabilities. Seamlessly manage employees, tracking their data efficiently and ensuring secure access. Simplify HR tasks with this comprehensive solution.",
+    techStack: [react, typescript, chakra, redux, node, express, mongodb],
+    liveLink: "https://ems-ebon.vercel.app/",
+    gitLink:
+      "https://github.com/SumatM/typeScript-learning/tree/main/mock_demo",
   },
   {
-    heading:"Aroma",
-    img:"https://raw.githubusercontent.com/SumatM/Zomato_clone/2602b3d75a1d9c67084add7af6229c9a152ec9a1/frontend/public/Screenshot_20230807_005739.png",
-    title:"Zomato Clone",
-    description:"Working... ",
-    techStack :[react,tailwind,redux,node,mongodb,express],
-    liveLink:"https://aroma-zomato.vercel.app/",
-    gitLink:"https://github.com/SumatM/Zomato_clone"
+    heading: "Aroma",
+    img: "https://raw.githubusercontent.com/SumatM/Zomato_clone/2602b3d75a1d9c67084add7af6229c9a152ec9a1/frontend/public/Screenshot_20230807_005739.png",
+    title: "Zomato Clone",
+    description: "Working... ",
+    techStack: [react, tailwind, redux, node, mongodb, express],
+    liveLink: "https://aroma-zomato.vercel.app/",
+    gitLink: "https://github.com/SumatM/Zomato_clone",
   },
-  
 ];
-
 
 const extra = [
   {
@@ -128,6 +130,15 @@ const extra = [
     techStack: [react, chakra, redux, chartjs],
     liveLink: "https://hilarious-wood-568-fw21-0275-updated1.vercel.app/",
     gitLink: "https://github.com/SumatM/SpendWiser",
-  }
-
-]
+  },
+  {
+    heading: " TEXT TO SPEECH",
+    img: "https://raw.githubusercontent.com/SumatM/Text-To-Speech/main/Screenshot%20(712).png",
+    title: " JavaScript Speech Synthesis",
+    description:
+      "WebPage that converts written text into spoken words. Utilized natural language processing techniques to analyze and interpret the text, generating synthesized speech output.",
+    techStack: [html, javascript, css],
+    liveLink: "https://text-to-speech-sumat.netlify.app/",
+    gitLink: "https://github.com/SumatM/Text-To-Speech",
+  },
+];

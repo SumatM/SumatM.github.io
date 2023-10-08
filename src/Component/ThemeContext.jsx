@@ -24,10 +24,15 @@ export default function ThemeContextProvider({ children }) {
       dText: "black",
       hover: "#C8E6C9",
     },
+    blackgreen: {
+      bg: "#212121",
+      dText: "#A56F26",
+      hover: "#333333",
+    },
   };
 
   const [theme, setTheme] = useState(
-    JSON.parse(localStorage.getItem("theme")) || themes.light
+    JSON.parse(localStorage.getItem("theme")) || themes.dark
   );
 
   function handleTheme(themeName) {

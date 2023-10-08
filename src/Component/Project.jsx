@@ -1,12 +1,4 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Grid,
-  Heading,
-  Text,
-
-} from "@chakra-ui/react";
+import { Box, Button, Flex, Grid, Heading, Text } from "@chakra-ui/react";
 import { ThemeContext } from "./ThemeContext";
 import { useContext, useEffect, useRef } from "react";
 import { ProjectList } from "../db/projectdb";
@@ -46,11 +38,12 @@ export default function Project() {
         >
           {ProjectList?.map((project) => {
             return (
-              <Box
+              <Box  
                 p="0 20px"
                 textAlign="left"
                 className="project-card"
-                boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px;"
+                boxShadow=" rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
+                mt='1rem'
                 _hover={{ background: mainTheme.theme.hover }}
               >
                 <Box>
@@ -67,7 +60,11 @@ export default function Project() {
 
                 <Box w={{ base: "105%", sm: "100%" }}>
                   <Link to={project.liveLink} target="_blank">
-                    <img style={{ width: "100%" }} src={project.img} alt={project.heading}/>
+                    <img
+                      style={{ width: "100%" }}
+                      src={project.img}
+                      alt={project.heading}
+                    />
                   </Link>
                 </Box>
                 <Box p="15px 0">
@@ -103,8 +100,18 @@ export default function Project() {
                       return (
                         <Box>
                           <Flex justifyContent="center">
-                          { (tech?.title == 'Express' || tech?.title == "Next.js") && (mainTheme?.theme.bg=='black' || mainTheme?.theme.bg=="#08105B") ? tech?.svg({size:'2.5rem',color:"#757575"}) :
-                            <img src={tech.img} style={{ width: tech.wid,fill:'red' }} alt={tech.title}/>}
+                            {(tech?.title == "Express" ||
+                              tech?.title == "Next.js") &&
+                            (mainTheme?.theme.bg == "black" ||
+                              mainTheme?.theme.bg == "#08105B") ? (
+                              tech?.svg({ size: "2.5rem", color: "#757575" })
+                            ) : (
+                              <img
+                                src={tech.img}
+                                style={{ width: tech.wid, fill: "red" }}
+                                alt={tech.title}
+                              />
+                            )}
                           </Flex>
                         </Box>
                       );
