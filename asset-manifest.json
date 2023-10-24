@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.7267a78a.css",
-    "main.js": "/static/js/main.6669aa98.js",
+    "main.js": "/static/js/main.aada2a07.js",
     "static/js/787.b8549a5f.chunk.js": "/static/js/787.b8549a5f.chunk.js",
     "static/media/IMG_edited-removebg-previewOlive.png": "/static/media/IMG20220220130528FAce_edited-removebg-previewOlive.0122dc8b677935c3bd21.png",
     "static/media/Sumat-Mallick-Resume.pdf": "/static/media/Sumat-Mallick-Resume.db9425cdf929d5db146f.pdf",
     "index.html": "/index.html",
     "main.7267a78a.css.map": "/static/css/main.7267a78a.css.map",
-    "main.6669aa98.js.map": "/static/js/main.6669aa98.js.map",
+    "main.aada2a07.js.map": "/static/js/main.aada2a07.js.map",
     "787.b8549a5f.chunk.js.map": "/static/js/787.b8549a5f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7267a78a.css",
-    "static/js/main.6669aa98.js"
+    "static/js/main.aada2a07.js"
   ]
 }
