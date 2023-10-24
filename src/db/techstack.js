@@ -1,5 +1,5 @@
-import {SiExpress} from 'react-icons/si'
-import {TbBrandNextjs} from 'react-icons/tb'
+import { SiExpress } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
 
 export const html = {
   title: "HTML",
@@ -67,7 +67,7 @@ export const mongodb = {
 export const express = {
   title: "Express",
   img: "https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png",
-  svg:SiExpress,
+  svg: SiExpress,
   wid: "60%",
   swid: "40%",
 };
@@ -83,7 +83,7 @@ export const nextjs = {
   title: "Next.js",
   img: "https://www.svgrepo.com/show/354113/nextjs-icon.svg",
   wid: "65%",
-  svg:TbBrandNextjs,
+  svg: TbBrandNextjs,
   swid: "36%",
 };
 
@@ -101,18 +101,23 @@ export const typescript = {
   swid: "40%",
 };
 
-
 export const python = {
-  title:"Python",
-  img:"https://img.freepik.com/free-icon/snakes_318-368381.jpg",
+  title: "Python",
+  img: "https://img.freepik.com/free-icon/snakes_318-368381.jpg",
   wid: "70%",
   swid: "40%",
-}
-
+};
 
 export const promptEngineering = {
-  title:'Prompt Engineering',
-  img:'https://static.vecteezy.com/system/resources/previews/021/495/996/original/chatgpt-openai-logo-icon-free-png.png',
+  title: "Prompt Engineering",
+  img: "https://static.vecteezy.com/system/resources/previews/021/495/996/original/chatgpt-openai-logo-icon-free-png.png",
   wid: "70%",
   swid: "35%",
-}
+};
+
+export const mySQL = {
+  title: "MySQL",
+  img: "https://www.notion.so/image/https%3A%2F%2Fpngimg.com%2Fd%2Fmysql_PNG9.png?table=block&id=27e6b5e3-e888-4802-9c0b-2e5ca6bdf31a&spaceId=5247e3c7-a9ff-4596-9c82-e08b13f4ea9d&width=250&userId=af1a9bd4-c5ca-4c4b-88f4-f0e87ce2512a&cache=v2",
+  wid: "70%",
+  swid: "35%",
+};

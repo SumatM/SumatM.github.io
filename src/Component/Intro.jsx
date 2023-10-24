@@ -9,14 +9,14 @@ import {
   PopoverContent,
   PopoverBody,
   Link,
+  Heading,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { ThemeContext } from "./ThemeContext";
 import { MdEmail } from "react-icons/md";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import imgOlive from "./../Banner/IMG20220220130528FAce_edited-removebg-previewOlive.png";
-import resume from "./../Banner/Sumat-Mallick-Resume.pdf";
+import { useTypewriter, Cursor, Typewriter } from "react-simple-typewriter";
 import { FcSettings } from "react-icons/fc";
 
 export default function Intro() {
@@ -50,6 +50,7 @@ export default function Intro() {
         className="about section"
         background={theme && theme.bg}
         p="15px"
+        h = '80vh'
       >
         <Popover>
           <PopoverTrigger>
@@ -200,7 +201,7 @@ export default function Intro() {
             textAlign="center"
           >
             <motion.div variants={item}>
-              <Box mb="10px">
+              <Box mb="10px" mt ='1rem'>
                 <Text fontWeight="bold" color="#00796B" fontSize="2xl">
                   Hello, I am
                 </Text>
@@ -221,14 +222,32 @@ export default function Intro() {
                 </Text>
               </Box>
             </motion.div>
-
-            <motion.div variants={item}>
-              <Box mt="15px">
-                <img
-                  src="https://readme-typing-svg.demolab.com?font=Ubuntu&weight=400&size=25&pause=1000&color=26A69A&background=FFFFFF00&center=true&vCenter=true&width=435&lines=A+Full+Stack+Web+Developer;A+Problem+Solver;A+Frontend+Developer;A+Backend+Developer;A+MERN+Developer;A+Music+Lover"
-                  alt="Typing SVG"
+            <motion.div variants={item} >
+             <Box mt = '2rem'>
+             <Text
+                fontWeight="500"
+                fontSize="35px"
+                display="inline"
+                color="#00796B"
+                id="user-detail-name"
+                letterSpacing="2px"
+                
+              >
+                <Typewriter
+                  words={[
+                    "A MERN Stack Developer.", 
+                    "Coding is my rhythm, and music is my melody.",
+                  ]}
+                  loop={false}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={150}
+                  cursorBlinking	= {true}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
                 />
-              </Box>
+              </Text>
+             </Box>
             </motion.div>
           </Flex>
 

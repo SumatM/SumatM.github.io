@@ -18,6 +18,7 @@ import {
   redux,
   tailwind,
   typescript,
+  mySQL
 } from "../db/techstack";
 
 export default function Skills() {
@@ -37,10 +38,10 @@ export default function Skills() {
     node,
     redux,
     chakra,
-    tailwind,
     git,
     python,
     promptEngineering,
+    mySQL
   ];
 
   return (
