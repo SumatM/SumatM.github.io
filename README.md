@@ -62,7 +62,6 @@ I am a passionate full-stack web developer with expertise in React and Next.js. 
 
 ## Contact
 
-- Email: sumatmallick@gmail.com
 - Portfolio: [https://sumatm.github.io/](https://sumatm.github.io/)
 - LinkedIn: [My LinkedIn Profile](https://www.linkedin.com/in/sumat-mallick-65b966227/)
 - GitHub: [My GitHub Profile](https://github.com/sumatm)
