@@ -8,7 +8,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import imgOlive from "./../Banner/IMG20220220130528FAce_edited-removebg-previewOlive.png";
-import resume from "./../Banner//Sumat-Mallick-Resume.pdf";
+// import resume from "./../Banner//Sumat-Mallick-Resume.pdf";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { ThemeContext } from "./ThemeContext";
@@ -63,7 +63,7 @@ export default function About() {
             undertake challenging projects and deliver exceptional results.
           </Text>
         </Box>
-        <Box p="5px 15px" fontWeight="bolder" color="white">
+        {/* <Box p="5px 15px" fontWeight="bolder" color="white">
           <Link
             href={resume}
             target="_blank"
@@ -80,14 +80,14 @@ export default function About() {
               id="resume-button-2"
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1ni4YYEIFx2EWl7TNt-B8ymbVc5wmK7qt/view?usp=drive_link"
+                  ""
                 )
               }
             >
               Resume
             </Button>
           </Link>
-        </Box>
+        </Box> */}
       </Flex>
     </Box>
   );

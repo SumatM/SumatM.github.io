@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { useRef } from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import resume from "./../Banner//Sumat-Mallick-Resume.pdf";
+// import resume from "./../Banner//Sumat-Mallick-Resume.pdf";
 import { Link as ScrollLink } from "react-scroll";
 
 export const NavBar = () => {
@@ -146,7 +146,7 @@ export const NavBar = () => {
               <Text className="nav-link contact" _hover={{cursor:'pointer'}}>CONTACT</Text>
             </ScrollLink>
           </Box>
-          <Box
+          {/* <Box
             p="5px 15px"
             _hover={{ color: "#4DB6AC" }}
             fontWeight="bolder"
@@ -164,7 +164,7 @@ export const NavBar = () => {
                   className="nav-link contact"
                   onClick={() =>
                     window.open(
-                      "https://drive.google.com/file/d/1ni4YYEIFx2EWl7TNt-B8ymbVc5wmK7qt/view?usp=drive_link"
+                      ""
                     )
                   }
                   
@@ -173,7 +173,7 @@ export const NavBar = () => {
                 </Text>
               </Link>
             </Box>
-          </Box>
+          </Box> */}
         </Flex>
       </Box>
       <Box
@@ -289,7 +289,7 @@ export const NavBar = () => {
                 <Text>CONTACT</Text>
               </ScrollLink>
             </Box>
-            <Box
+            {/* <Box
               p="5px 15px"
               className="nav-link resume"
               fontWeight="bolder"
@@ -309,14 +309,14 @@ export const NavBar = () => {
                   id="resume-button-1"
                   onClick={() =>
                     window.open(
-                      "https://drive.google.com/file/d/1ni4YYEIFx2EWl7TNt-B8ymbVc5wmK7qt/view?usp=drive_link"
+                      ""
                     )
                   }
                 >
                   Resume
                 </Button>
               </a>
-            </Box>
+            </Box> */}
           </DrawerBody>
         </DrawerContent>
       </Drawer>

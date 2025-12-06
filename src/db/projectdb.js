@@ -64,8 +64,8 @@ export const ProjectList = [
     description:
       "Web Resume a professionally designed interactive platform that presents my skills and illustrious professional journey. With multi-theme support and captivating animations, it offers a compelling showcase of my expertise.",
     techStack: [nextjs, tailwind, redux],
-    liveLink: "https://web-resume-six.vercel.app/resume",
-    gitLink: "https://github.com/SumatM/web_resume",
+    liveLink: "https://web--six.vercel.app/",
+    gitLink: "https://github.com/SumatM/",
   },
   {
     heading: "JOKE GENERATOR",

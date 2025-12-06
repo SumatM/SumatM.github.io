@@ -157,7 +157,7 @@ export default function Footer() {
                   fontWeight="500"
                   letterSpacing="0.8px"
                 >
-                  +91-8894417615
+                  +91-XXXXXXXXXX
                 </Text>
               </motion.div>
             </Flex>
