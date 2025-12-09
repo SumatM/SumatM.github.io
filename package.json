@@ -1,7 +1,7 @@
 {
   "homepage": "https://sumatm.github.io",
   "name": "sumatm.github.io",
-  "version": "0.1.0",
+  "version": "0.3.1.12",
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^2.1.0",
@@ -52,5 +52,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
